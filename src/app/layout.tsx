@@ -17,7 +17,10 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "RENCEL | Intelligence & Supply",
   description:
-    "AI-powered procurement intelligence platforms, supply chain automation, and strategic sourcing. 10+ years of global expertise, now building the future.",
+    "AI-powered intelligence platforms for automotive, healthcare, energy, and supply chain sectors. 20+ years of global procurement expertise, applied to technology that delivers.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -28,7 +31,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
+      className={`${inter.variable} ${spaceGrotesk.variable} antialiased dark`}
+      style={{ colorScheme: "dark" }}
     >
       <body>
         <Navbar />
