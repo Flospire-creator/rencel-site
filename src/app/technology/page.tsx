@@ -1,4 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Technology Services",
+  description: "AI-powered intelligence platforms for automotive, healthcare, energy, and supply chain. Procurement intelligence, supply chain automation, digital twins, and custom SaaS development.",
+  alternates: { canonical: "/technology" },
+};
 
 const services = [
   { title: "Automotive Data Intelligence", description: "Connected vehicle platforms, workshop analytics, and predictive maintenance systems for the automotive aftermarket. Real-time diagnostics and fleet intelligence delivered as managed SaaS." },

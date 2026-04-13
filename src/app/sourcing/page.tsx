@@ -1,4 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sourcing & Supply Chain",
+  description: "Global procurement and supply chain services across five continents. Supplier management, logistics, quality assurance, freight, and cost optimisation for energy, manufacturing, and industrial sectors.",
+  alternates: { canonical: "/sourcing" },
+};
 
 const services = [
   { title: "Global Sourcing", description: "We identify, qualify, and manage suppliers across Europe, Asia, Africa, and the Americas. A network built over 20 years that gives you access to competitive pricing without compromising on quality or reliability." },

@@ -1,4 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Rencel",
+  description: "Rencel Procurements Limited. 20 years of procurement expertise across five continents, now building AI-powered intelligence platforms for automotive, healthcare, and energy sectors.",
+  alternates: { canonical: "/about" },
+};
 
 const timeline = [
   { year: "2006", title: "Industry Roots", description: "Started in procurement and supply chain management within the energy sector." },

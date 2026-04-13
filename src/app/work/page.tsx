@@ -1,4 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Selected Work",
+  description: "Case studies across technology and procurement. Automotive intelligence platforms, NHS healthcare systems, supply chain automation, and global sourcing projects.",
+  alternates: { canonical: "/work" },
+};
 
 const projects = [
   { category: "Technology", title: "Automotive Data Intelligence Platform", description: "Currently developing an intelligence platform for the UK automotive aftermarket. The product brings together vehicle data, workshop operations, and predictive analytics into a single managed service. Launching soon.", tags: ["Automotive", "SaaS", "AI/ML", "In Development"] },
