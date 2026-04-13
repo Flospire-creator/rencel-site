@@ -11,7 +11,7 @@ export function Footer() {
               <Logo />
             </div>
             <p className="text-muted text-sm leading-relaxed max-w-sm mb-5">
-              Intelligence & Supply. 10+ years of global procurement expertise, now building AI-powered platforms.
+              Intelligence & Supply. 20+ years of global procurement expertise, now building AI-powered platforms.
             </p>
             <div className="text-sm text-muted space-y-1">
               <div><a href="tel:+441934515563" className="hover:text-accent transition-colors">+44 (0)1934 515563</a></div>

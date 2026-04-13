@@ -1,19 +1,19 @@
 import Link from "next/link";
 
 const services = [
-  { title: "AI Procurement Intelligence", description: "Platforms that turn procurement data into strategic advantage. Spend analytics that surface hidden savings, supplier risk models that predict disruption, and demand forecasting that keeps you ahead." },
-  { title: "Supply Chain Automation", description: "Agentic AI that does the heavy lifting. Automated PO processing, intelligent vendor management workflows, and compliance checks that run 24/7." },
-  { title: "Digital Twin Solutions", description: "Simulate your entire supply chain before making changes. Model scenarios, stress-test logistics networks, and optimise operations without risking a single shipment." },
-  { title: "Custom SaaS Development", description: "Bespoke platforms built for your exact workflow. From procurement portals to logistics dashboards — enterprise-grade SaaS your team actually wants to use." },
-  { title: "Data & Analytics Platforms", description: "Turn fragmented procurement data into clear, actionable dashboards. Real-time visibility across spend, suppliers, compliance, and performance." },
-  { title: "Security & Compliance", description: "Every platform meets enterprise standards. SOC 2 readiness, GDPR compliance, role-based access, and audit trails — built in from day one." },
+  { title: "AI Procurement Intelligence", description: "Platforms that turn procurement data into decisions. Spend analytics that surface hidden savings, supplier risk models that flag disruption early, and demand forecasting that keeps your pipeline healthy." },
+  { title: "Supply Chain Automation", description: "Intelligent workflows that handle the repetitive work. Automated purchase order processing, vendor onboarding, compliance checks, and exception routing. Your team focuses on strategy." },
+  { title: "Digital Twin Solutions", description: "Simulate your supply chain before making changes. Model scenarios, test logistics networks under stress, and find the best route forward without risking live operations." },
+  { title: "Custom SaaS Development", description: "Bespoke platforms built around your process. Procurement portals, logistics dashboards, supplier management tools. Enterprise-grade software your team will actually use." },
+  { title: "Data & Analytics Platforms", description: "Unified dashboards across spend, suppliers, compliance, and performance. Real-time visibility that replaces spreadsheets and guesswork with clear, reliable data." },
+  { title: "Security & Compliance", description: "Every platform we ship meets enterprise standards. SOC 2 readiness, GDPR compliance, role-based access, and full audit trails. Built in from day one, not added later." },
 ];
 
 const process = [
-  { step: "01", title: "Discovery", description: "We map your procurement workflows, pain points, and goals." },
-  { step: "02", title: "Architecture", description: "We design the platform architecture, data models, and integrations." },
-  { step: "03", title: "Build & Iterate", description: "Agile sprints with demos every two weeks. You steer the direction." },
-  { step: "04", title: "Launch & Scale", description: "We deploy, monitor, and optimise. Then help you scale." },
+  { step: "01", title: "Discovery", description: "We map your workflows, pain points, and goals. No assumptions." },
+  { step: "02", title: "Architecture", description: "Platform design, data models, and integration planning before any code is written." },
+  { step: "03", title: "Build & Iterate", description: "Two-week sprints with working demos. You see progress and steer the direction." },
+  { step: "04", title: "Launch & Scale", description: "Deployment, monitoring, and optimisation. Then we help you grow it." },
 ];
 
 export default function TechnologyPage() {
@@ -29,7 +29,7 @@ export default function TechnologyPage() {
             Intelligence Platforms That Solve Real Problems
           </h1>
           <p className="text-base md:text-lg text-muted max-w-xl leading-relaxed">
-            Most tech companies build procurement tools from the outside in. We build from the inside out — because we&apos;ve lived the problems for over a decade.
+            Most technology firms build procurement tools without understanding procurement. We have spent 20 years inside supply chains across five continents. That experience shapes every platform we design.
           </p>
         </div>
       </section>
@@ -51,7 +51,7 @@ export default function TechnologyPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center gap-3 mb-3">
             <div className="w-8 h-px bg-accent" />
-            <span className="text-xs tracking-[0.2em] uppercase text-accent font-medium">Our Process</span>
+            <span className="text-xs tracking-[0.2em] uppercase text-accent font-medium">How We Work</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight mb-12">
             From Concept to Deployed Platform
@@ -70,9 +70,9 @@ export default function TechnologyPage() {
 
       <section className="py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)] mb-4">Have an Idea for a Platform?</h2>
-          <p className="text-muted max-w-md mx-auto mb-8">We&apos;ll scope it, architect it, and build it — with the procurement expertise to make sure it works.</p>
-          <Link href="/contact" className="inline-flex px-6 py-3 bg-accent text-background font-semibold rounded-full text-sm hover:opacity-90 transition-opacity">Let&apos;s Build Together</Link>
+          <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)] mb-4">Have a Platform in Mind?</h2>
+          <p className="text-muted max-w-md mx-auto mb-8">Tell us what you need built. We will scope it, architect it, and deliver it with the domain knowledge to get it right.</p>
+          <Link href="/contact" className="inline-flex px-6 py-3 bg-accent text-background font-semibold rounded-full text-sm hover:opacity-90 transition-opacity">Talk to Our Team</Link>
         </div>
       </section>
     </>

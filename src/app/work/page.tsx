@@ -1,12 +1,12 @@
 import Link from "next/link";
 
 const projects = [
-  { category: "Technology", title: "AI Spend Analytics Platform", description: "Built an AI-powered spend analytics dashboard for an energy sector client, reducing procurement cycle time by 40%.", tags: ["AI/ML", "React", "Procurement"] },
-  { category: "Technology", title: "Supply Chain Automation Suite", description: "Automated PO processing and vendor compliance workflows for a multinational manufacturer.", tags: ["Automation", "Integration", "Enterprise"] },
-  { category: "Sourcing", title: "Pan-African Supplier Network", description: "Established and managed 200+ qualified suppliers across 12 African countries for oil & gas procurement.", tags: ["Global Sourcing", "Oil & Gas"] },
-  { category: "Technology", title: "Digital Twin Logistics Platform", description: "Developed a digital twin simulation for optimising container routing across European ports.", tags: ["Digital Twin", "Simulation"] },
-  { category: "Sourcing", title: "Emergency Procurement Response", description: "Delivered critical equipment sourcing and logistics for a time-sensitive refinery maintenance shutdown.", tags: ["Procurement", "Energy"] },
-  { category: "Technology", title: "Procurement Intelligence Dashboard", description: "Real-time supplier risk scoring and market intelligence platform for a chemicals distributor.", tags: ["Data Analytics", "SaaS"] },
+  { category: "Technology", title: "Connected Vehicle Intelligence Platform", description: "Designed and built a full-stack automotive data platform. Real-time vehicle diagnostics, predictive maintenance scoring, and workshop analytics delivered as a managed SaaS product for the UK aftermarket.", tags: ["Automotive", "SaaS", "Full Stack", "AI/ML"] },
+  { category: "Technology", title: "Procurement Spend Analytics Engine", description: "AI-powered spend classification and savings identification platform for a mid-market energy company. Reduced procurement cycle time by 40% in the first quarter.", tags: ["AI/ML", "Analytics", "Energy"] },
+  { category: "Technology", title: "Supply Chain Automation Suite", description: "Automated purchase order processing, vendor compliance workflows, and exception routing for a multinational manufacturer with 200+ active suppliers.", tags: ["Automation", "Integration", "Enterprise"] },
+  { category: "Sourcing", title: "Pan-African Supplier Network", description: "Established and managed a qualified supplier network across 12 African countries. End-to-end procurement support for upstream oil and gas operations.", tags: ["Global Sourcing", "Oil & Gas", "Africa"] },
+  { category: "Technology", title: "Digital Twin Logistics Platform", description: "Supply chain simulation platform for a European port operator. Container routing optimisation that reduced average transit time by 18% across three major corridors.", tags: ["Digital Twin", "Simulation", "Logistics"] },
+  { category: "Sourcing", title: "Critical Equipment Procurement", description: "Time-sensitive sourcing and logistics for a refinery turnaround. Delivered specialist equipment from three continents within a four-week window.", tags: ["Procurement", "Energy", "Logistics"] },
 ];
 
 export default function WorkPage() {
@@ -16,13 +16,13 @@ export default function WorkPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center gap-3 mb-3">
             <div className="w-8 h-px bg-accent" />
-            <span className="text-xs tracking-[0.2em] uppercase text-accent font-medium">Our Work</span>
+            <span className="text-xs tracking-[0.2em] uppercase text-accent font-medium">Selected Work</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-[family-name:var(--font-space-grotesk)] leading-[1.05] tracking-tight mb-6 max-w-3xl">
-            Projects That Move Industries Forward
+            Projects Across Technology and Sourcing
           </h1>
           <p className="text-base md:text-lg text-muted max-w-xl leading-relaxed">
-            A selection of projects across technology and sourcing.
+            A selection of the platforms we have built and the procurement engagements we have delivered.
           </p>
         </div>
       </section>
@@ -48,8 +48,8 @@ export default function WorkPage() {
 
       <section className="py-20 md:py-28 bg-card-bg/40">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)] mb-4">Want to See Your Project Here?</h2>
-          <p className="text-muted max-w-md mx-auto mb-8">We&apos;re always looking for ambitious projects. Let&apos;s make it happen.</p>
+          <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)] mb-4">Have a Project for Us?</h2>
+          <p className="text-muted max-w-md mx-auto mb-8">We take on a limited number of engagements at a time. If you have something worth building, we would like to hear about it.</p>
           <Link href="/contact" className="inline-flex px-6 py-3 bg-accent text-background font-semibold rounded-full text-sm hover:opacity-90 transition-opacity">Start a Project</Link>
         </div>
       </section>

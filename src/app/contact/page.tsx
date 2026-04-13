@@ -25,7 +25,6 @@ export default function ContactPage() {
     <section className="pt-32 pb-20 md:pt-44 md:pb-28">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Left */}
           <div>
             <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-px bg-accent" />
@@ -35,7 +34,7 @@ export default function ContactPage() {
               Start a Conversation
             </h1>
             <p className="text-muted leading-relaxed mb-10">
-              Whether you have a platform to build, a supply chain to optimise, or just want to explore what&apos;s possible — we&apos;re here to talk.
+              Whether you need a platform built, a supply chain managed, or want to explore what is possible, we are here to talk.
             </p>
 
             <div className="space-y-5">
@@ -54,13 +53,12 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Right — Form */}
           <div>
             {submitted ? (
               <div className="flex flex-col items-center justify-center h-full text-center p-10 rounded-xl border border-card-border bg-card-bg">
                 <div className="text-accent text-4xl mb-4">&#10003;</div>
                 <h3 className="text-xl font-bold font-[family-name:var(--font-space-grotesk)] mb-2">Message Sent</h3>
-                <p className="text-muted text-sm">Thanks for reaching out. We&apos;ll get back to you within 24 hours.</p>
+                <p className="text-muted text-sm">Thank you. We will get back to you within 24 hours.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-5 p-8 rounded-xl border border-card-border bg-card-bg">
