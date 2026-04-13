@@ -1,11 +1,13 @@
 import Link from "next/link";
 
 const services = [
+  { title: "Automotive Data Intelligence", description: "Connected vehicle platforms, workshop analytics, and predictive maintenance systems for the automotive aftermarket. Real-time diagnostics and fleet intelligence delivered as managed SaaS." },
+  { title: "Healthcare & Clinical Platforms", description: "Patient monitoring systems, clinical dashboards, and care coordination platforms for NHS trusts and private healthcare providers. Built to meet NHS Digital standards." },
   { title: "AI Procurement Intelligence", description: "Platforms that turn procurement data into decisions. Spend analytics that surface hidden savings, supplier risk models that flag disruption early, and demand forecasting that keeps your pipeline healthy." },
   { title: "Supply Chain Automation", description: "Intelligent workflows that handle the repetitive work. Automated purchase order processing, vendor onboarding, compliance checks, and exception routing. Your team focuses on strategy." },
-  { title: "Digital Twin Solutions", description: "Simulate your supply chain before making changes. Model scenarios, test logistics networks under stress, and find the best route forward without risking live operations." },
-  { title: "Custom SaaS Development", description: "Bespoke platforms built around your process. Procurement portals, logistics dashboards, supplier management tools. Enterprise-grade software your team will actually use." },
-  { title: "Data & Analytics Platforms", description: "Unified dashboards across spend, suppliers, compliance, and performance. Real-time visibility that replaces spreadsheets and guesswork with clear, reliable data." },
+  { title: "Custom SaaS Development", description: "Bespoke platforms built around your process. Industry portals, operational dashboards, and management tools. Enterprise-grade software your team will actually use." },
+  { title: "Data & Analytics Platforms", description: "Unified dashboards across operations, compliance, and performance. Real-time visibility that replaces spreadsheets and guesswork with clear, reliable data." },
+  { title: "Digital Twin Solutions", description: "Simulate complex operations before making changes. Model scenarios, test networks under stress, and find the best path forward without risking live systems." },
   { title: "Security & Compliance", description: "Every platform we ship meets enterprise standards. SOC 2 readiness, GDPR compliance, role-based access, and full audit trails. Built in from day one, not added later." },
 ];
 
@@ -29,7 +31,7 @@ export default function TechnologyPage() {
             Intelligence Platforms That Solve Real Problems
           </h1>
           <p className="text-base md:text-lg text-muted max-w-xl leading-relaxed">
-            Most technology firms build procurement tools without understanding procurement. We have spent 20 years inside supply chains across five continents. That experience shapes every platform we design.
+            We build platforms for industries we understand. Automotive, healthcare, energy, and supply chain. 20 years of operational experience shapes every product we design and ship.
           </p>
         </div>
       </section>

@@ -1,11 +1,11 @@
 import Link from "next/link";
 
 const projects = [
-  { category: "Technology", title: "Connected Vehicle Intelligence Platform", description: "Designed and built a full-stack automotive data platform. Real-time vehicle diagnostics, predictive maintenance scoring, and workshop analytics delivered as a managed SaaS product for the UK aftermarket.", tags: ["Automotive", "SaaS", "Full Stack", "AI/ML"] },
+  { category: "Technology", title: "Automotive Data Intelligence Platform", description: "Currently developing an intelligence platform for the UK automotive aftermarket. The product brings together vehicle data, workshop operations, and predictive analytics into a single managed service. Launching soon.", tags: ["Automotive", "SaaS", "AI/ML", "In Development"] },
+  { category: "Technology", title: "Remote Patient Monitoring Platform", description: "Designed a clinical monitoring and care coordination platform for NHS virtual ward programmes. Real-time patient observations, automated clinical scoring, and clinician alerting built to NHS Digital standards.", tags: ["Healthcare", "NHS", "SaaS", "Clinical"] },
   { category: "Technology", title: "Procurement Spend Analytics Engine", description: "AI-powered spend classification and savings identification platform for a mid-market energy company. Reduced procurement cycle time by 40% in the first quarter.", tags: ["AI/ML", "Analytics", "Energy"] },
   { category: "Technology", title: "Supply Chain Automation Suite", description: "Automated purchase order processing, vendor compliance workflows, and exception routing for a multinational manufacturer with 200+ active suppliers.", tags: ["Automation", "Integration", "Enterprise"] },
   { category: "Sourcing", title: "Pan-African Supplier Network", description: "Established and managed a qualified supplier network across 12 African countries. End-to-end procurement support for upstream oil and gas operations.", tags: ["Global Sourcing", "Oil & Gas", "Africa"] },
-  { category: "Technology", title: "Digital Twin Logistics Platform", description: "Supply chain simulation platform for a European port operator. Container routing optimisation that reduced average transit time by 18% across three major corridors.", tags: ["Digital Twin", "Simulation", "Logistics"] },
   { category: "Sourcing", title: "Critical Equipment Procurement", description: "Time-sensitive sourcing and logistics for a refinery turnaround. Delivered specialist equipment from three continents within a four-week window.", tags: ["Procurement", "Energy", "Logistics"] },
 ];
 

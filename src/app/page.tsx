@@ -19,7 +19,7 @@ const sourcingServices = [
   { title: "Logistics & Freight", description: "End-to-end logistics management, freight coordination, and on-time fulfilment across five continents." },
 ];
 
-const marqueeItems = ["Procurement Intelligence", "Supply Chain Automation", "Digital Twin Platforms", "Global Sourcing", "AI Analytics", "Enterprise SaaS", "Logistics Management", "Energy Sector", "Automotive Platforms"];
+const marqueeItems = ["Procurement Intelligence", "Supply Chain Automation", "Digital Twins", "Global Sourcing", "AI Analytics", "Enterprise SaaS", "Healthcare Platforms", "Automotive Intelligence", "Energy Sector", "NHS Digital"];
 
 export default function Home() {
   const marqueeText = marqueeItems.join(" \u00B7 ");
@@ -35,11 +35,11 @@ export default function Home() {
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-[family-name:var(--font-space-grotesk)] leading-[1.05] tracking-tight mb-6">
-            We Build Intelligence<br />Platforms for Supply Chains
+            We Build Intelligence<br />Platforms That Work
           </h1>
 
           <p className="text-base md:text-lg text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
-            Rencel is a technology and procurement consultancy. We design AI-powered platforms for supply chain management and source goods across five continents. 20+ years of industry experience, applied to software that works.
+            Rencel is a technology and procurement consultancy. We design and build AI-powered platforms for automotive, healthcare, energy, and supply chain sectors. We also source goods and manage logistics across five continents. 20+ years of industry experience, applied to software that delivers.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
