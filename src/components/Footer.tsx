@@ -1,89 +1,46 @@
 import Link from "next/link";
-
-const footerLinks = {
-  Services: [
-    { href: "/technology", label: "AI Procurement Intelligence" },
-    { href: "/technology", label: "Supply Chain Automation" },
-    { href: "/technology", label: "Digital Twin Solutions" },
-    { href: "/sourcing", label: "Global Sourcing" },
-    { href: "/sourcing", label: "Logistics Management" },
-  ],
-  Company: [
-    { href: "/about", label: "About" },
-    { href: "/work", label: "Case Studies" },
-    { href: "/contact", label: "Contact" },
-  ],
-};
+import { Logo } from "./Logo";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/5 bg-[#0A0A0B]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          {/* Brand */}
+    <footer className="border-t border-card-border">
+      <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-8 rounded-md bg-accent flex items-center justify-center">
-                <span className="text-[#0A0A0B] font-bold text-sm font-[family-name:var(--font-space-grotesk)]">
-                  R
-                </span>
-              </div>
-              <span className="text-lg font-bold tracking-wider font-[family-name:var(--font-space-grotesk)]">
-                RENCEL
-              </span>
+            <div className="mb-4">
+              <Logo />
             </div>
-            <p className="text-muted text-sm leading-relaxed max-w-md mb-6">
-              Intelligence & Supply. 10+ years of global procurement expertise,
-              now building AI-powered platforms that transform how businesses
-              source, automate, and optimise their supply chains.
+            <p className="text-muted text-sm leading-relaxed max-w-sm mb-5">
+              Intelligence & Supply. 10+ years of global procurement expertise, now building AI-powered platforms.
             </p>
-            <div className="flex flex-col gap-1 text-sm text-muted">
-              <a
-                href="tel:+441934515563"
-                className="hover:text-accent transition-colors"
-              >
-                +44 (0)1934 515563
-              </a>
-              <a
-                href="mailto:info@rencelprocurements.co.uk"
-                className="hover:text-accent transition-colors"
-              >
-                info@rencelprocurements.co.uk
-              </a>
+            <div className="text-sm text-muted space-y-1">
+              <div><a href="tel:+441934515563" className="hover:text-accent transition-colors">+44 (0)1934 515563</a></div>
+              <div><a href="mailto:info@rencelprocurements.co.uk" className="hover:text-accent transition-colors">info@rencelprocurements.co.uk</a></div>
             </div>
           </div>
 
-          {/* Link columns */}
-          {Object.entries(footerLinks).map(([title, items]) => (
-            <div key={title}>
-              <h4 className="text-sm font-semibold tracking-wider uppercase mb-4">
-                {title}
-              </h4>
-              <ul className="flex flex-col gap-3">
-                {items.map((item) => (
-                  <li key={item.label}>
-                    <Link
-                      href={item.href}
-                      className="text-sm text-muted hover:text-accent transition-colors"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+          <div>
+            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Services</h4>
+            <div className="space-y-2.5">
+              {["AI Procurement Intelligence", "Supply Chain Automation", "Digital Twin Solutions", "Global Sourcing", "Logistics Management"].map((s) => (
+                <div key={s}><Link href={s.includes("Global") || s.includes("Logistics") ? "/sourcing" : "/technology"} className="text-sm text-muted hover:text-accent transition-colors">{s}</Link></div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          <div>
+            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Company</h4>
+            <div className="space-y-2.5">
+              {[{ href: "/about", label: "About" }, { href: "/work", label: "Case Studies" }, { href: "/contact", label: "Contact" }].map((l) => (
+                <div key={l.href}><Link href={l.href} className="text-sm text-muted hover:text-accent transition-colors">{l.label}</Link></div>
+              ))}
+            </div>
+          </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-muted">
-            &copy; {new Date().getFullYear()} Rencel Procurements Limited. All
-            rights reserved. Company No. 09759065
-          </p>
-          <p className="text-xs text-muted">
-            Registered in England & Wales
-          </p>
+        <div className="mt-12 pt-6 border-t border-card-border flex flex-col md:flex-row justify-between gap-2 text-xs text-muted">
+          <span>&copy; {new Date().getFullYear()} Rencel Procurements Limited. Company No. 09759065</span>
+          <span>Registered in England & Wales</span>
         </div>
       </div>
     </footer>
