@@ -65,7 +65,7 @@ export async function POST(request: Request) {
 
     await resend.emails.send({
       from: "Rencel Website <onboarding@resend.dev>",
-      to: "info@rencelprocurements.co.uk",
+      to: "flo.rence23@yahoo.co.uk",
       replyTo: email,
       subject: `New enquiry from ${esc(name)}${company ? ` at ${esc(company)}` : ""}`,
       html: `
