@@ -84,10 +84,10 @@ export default function Home() {
       </section>
 
       {/* Marquee */}
-      <div className="overflow-hidden border-b border-card-border py-4">
+      <div className="overflow-hidden border-b border-card-border py-6">
         <div className="animate-marquee whitespace-nowrap flex">
-          <span className="text-xs tracking-[0.15em] uppercase text-muted/40">{marqueeText} &middot;&nbsp;</span>
-          <span className="text-xs tracking-[0.15em] uppercase text-muted/40">{marqueeText} &middot;&nbsp;</span>
+          <span className="text-2xl md:text-3xl tracking-[0.12em] uppercase text-muted/20 font-[family-name:var(--font-space-grotesk)] font-bold">{marqueeText} &middot;&nbsp;</span>
+          <span className="text-2xl md:text-3xl tracking-[0.12em] uppercase text-muted/20 font-[family-name:var(--font-space-grotesk)] font-bold">{marqueeText} &middot;&nbsp;</span>
         </div>
       </div>
 
