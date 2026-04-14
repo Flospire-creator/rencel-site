@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const projects = [
-  { category: "Technology", title: "Automotive Data Intelligence Platform", description: "Currently developing an intelligence platform for the UK automotive aftermarket. The product brings together vehicle data, workshop operations, and predictive analytics into a single managed service. Launching soon.", tags: ["Automotive", "SaaS", "AI/ML", "In Development"] },
+  { category: "Technology", title: "Automotive Intelligence as a Service", description: "Building a connected intelligence platform for the UK automotive aftermarket. Vehicle data, workshop operations, and predictive analytics unified into a single managed service for the trade.", tags: ["Automotive", "SaaS", "AI/ML", "Platform"] },
   { category: "Technology", title: "Remote Patient Monitoring Platform", description: "Designed a clinical monitoring and care coordination platform for NHS virtual ward programmes. Real-time patient observations, automated clinical scoring, and clinician alerting built to NHS Digital standards.", tags: ["Healthcare", "NHS", "SaaS", "Clinical"] },
   { category: "Technology", title: "Procurement Spend Analytics Engine", description: "AI-powered spend classification and savings identification platform for a mid-market energy company. Reduced procurement cycle time by 40% in the first quarter.", tags: ["AI/ML", "Analytics", "Energy"] },
   { category: "Technology", title: "Supply Chain Automation Suite", description: "Automated purchase order processing, vendor compliance workflows, and exception routing for a multinational manufacturer with 200+ active suppliers.", tags: ["Automation", "Integration", "Enterprise"] },

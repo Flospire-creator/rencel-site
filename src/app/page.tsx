@@ -66,6 +66,10 @@ export default function Home() {
       {/* Sectors we serve */}
       <section className="py-16 border-y border-card-border">
         <div className="max-w-6xl mx-auto px-6">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-8 h-px bg-accent" />
+            <span className="text-xs tracking-[0.2em] uppercase text-accent font-medium">Sectors We Serve</span>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {sectors.map((s) => (
               <div key={s.name} className="glass-card rounded-xl p-5 flex items-center gap-3">

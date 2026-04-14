@@ -11,6 +11,7 @@ const links = [
   { href: "/sourcing", label: "Sourcing" },
   { href: "/about", label: "About" },
   { href: "/work", label: "Work" },
+  { href: "/insights", label: "Insights" },
   { href: "/contact", label: "Contact" },
 ];
 

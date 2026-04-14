@@ -15,10 +15,32 @@ const serviceOptions = [
 export default function ContactPage() {
   const [formData, setFormData] = useState({ name: "", email: "", company: "", service: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSending(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Something went wrong.");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to send. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -85,8 +107,11 @@ export default function ContactPage() {
                   <label htmlFor="message" className="block text-xs text-muted uppercase tracking-wider mb-1.5">Message *</label>
                   <textarea id="message" required rows={4} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} className="w-full bg-transparent border-b border-card-border py-2.5 text-foreground focus:outline-none focus:border-accent transition-colors resize-none" placeholder="Tell us about your project..." />
                 </div>
-                <button type="submit" className="mt-2 w-full py-3 bg-accent text-background font-semibold rounded-full text-sm hover:opacity-90 transition-opacity">
-                  Send Message
+                {error && (
+                  <p className="text-red-400 text-sm">{error}</p>
+                )}
+                <button type="submit" disabled={sending} className="mt-2 w-full py-3 bg-accent text-background font-semibold rounded-full text-sm hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed">
+                  {sending ? "Sending..." : "Send Message"}
                 </button>
               </form>
             )}
