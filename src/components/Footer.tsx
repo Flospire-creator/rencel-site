@@ -38,8 +38,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-card-border flex flex-col md:flex-row justify-between gap-2 text-xs text-muted">
-          <span>&copy; {new Date().getFullYear()} Rencel Procurements Limited. Company No. 09759065</span>
+        <div className="mt-12 pt-6 border-t border-card-border flex flex-col md:flex-row justify-between gap-2 text-sm text-muted">
+          <span>&copy; {new Date().getFullYear()} Rencel Procurements Limited. Company No. 09746971</span>
           <span>Registered in England & Wales</span>
         </div>
       </div>
