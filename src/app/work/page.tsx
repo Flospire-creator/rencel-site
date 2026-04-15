@@ -26,10 +26,10 @@ export default function WorkPage() {
             <span className="text-xs tracking-[0.2em] uppercase text-accent font-medium">Selected Work</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-[family-name:var(--font-space-grotesk)] leading-[1.05] tracking-tight mb-6 max-w-3xl">
-            Projects Across Technology and Sourcing
+            What We Have Built
           </h1>
           <p className="text-base md:text-lg text-muted max-w-xl leading-relaxed">
-            A selection of the platforms we have built and the procurement engagements we have delivered.
+            Platforms we have built and sourcing work we have done.
           </p>
         </div>
       </section>

@@ -17,10 +17,10 @@ const timeline = [
 ];
 
 const values = [
-  { title: "Domain-Led Engineering", description: "We build technology from procurement expertise, not the other way around. Every feature solves a problem we have seen firsthand." },
+  { title: "Built From Experience", description: "We build technology from procurement expertise, not the other way around. Every feature solves a problem we have seen firsthand." },
   { title: "Enterprise Standards", description: "Production-grade platforms with modern architecture, thorough testing, and security built in from the start." },
   { title: "Global Reach", description: "Five continents, 20 years, and hundreds of supply chain engagements inform everything we design and deliver." },
-  { title: "Transparent Partnership", description: "No black boxes. We work alongside your team, share our reasoning, and build capability as we go." },
+  { title: "No Black Boxes", description: "We work alongside your team, share our reasoning, and upskill your people as we go." },
 ];
 
 export default function AboutPage() {
@@ -64,9 +64,9 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center gap-3 mb-3">
             <div className="w-8 h-px bg-accent" />
-            <span className="text-xs tracking-[0.2em] uppercase text-accent font-medium">What Drives Us</span>
+            <span className="text-xs tracking-[0.2em] uppercase text-accent font-medium">How We Work</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight mb-10">Our Principles</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight mb-10">Principles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {values.map((v) => (
               <div key={v.title} className="p-6 rounded-xl bg-card-bg border border-card-border">

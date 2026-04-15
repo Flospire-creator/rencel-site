@@ -116,7 +116,7 @@ export default function Home() {
                 Data In. Decisions Out.
               </h2>
               <p className="text-muted max-w-lg mx-auto">
-                Every platform we build follows the same principle. Connect the data, apply intelligence, deliver actionable outcomes.
+                Every platform we build follows the same principle. Connect the data, apply intelligence, deliver real outcomes.
               </p>
             </div>
           </ScrollReveal>
@@ -127,7 +127,7 @@ export default function Home() {
 
           {/* Visual proof — mini dashboard mockup */}
           <ScrollReveal delay={400}>
-            <div className="mt-20 relative rounded-2xl overflow-hidden border border-card-border bg-card-bg/50 backdrop-blur-sm">
+            <div className="mt-20 relative rounded-2xl overflow-hidden border border-card-border bg-card-bg backdrop-blur-sm">
               <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent" />
 
               {/* Mock dashboard header */}
@@ -148,7 +148,7 @@ export default function Home() {
                   { label: "Avg Lead Time", value: "14.2d", change: "-3.1d", up: false },
                   { label: "Cost Savings (YTD)", value: "£2.4M", change: "+18%", up: true },
                 ].map((metric) => (
-                  <div key={metric.label} className="p-4 rounded-xl bg-background/50 border border-card-border">
+                  <div key={metric.label} className="p-4 rounded-xl bg-background/80 border border-card-border">
                     <div className="text-[10px] text-muted uppercase tracking-wider mb-2">{metric.label}</div>
                     <div className="text-xl md:text-2xl font-bold font-[family-name:var(--font-space-grotesk)] gradient-text">{metric.value}</div>
                     <div className={`text-xs mt-1 ${metric.up ? "text-emerald-400" : "text-amber-400"}`}>
@@ -158,7 +158,7 @@ export default function Home() {
                 ))}
 
                 {/* Mock chart area */}
-                <div className="col-span-2 md:col-span-4 mt-2 p-4 rounded-xl bg-background/50 border border-card-border h-32 flex items-end gap-1">
+                <div className="col-span-2 md:col-span-4 mt-2 p-4 rounded-xl bg-background/80 border border-card-border h-32 flex items-end gap-1">
                   {Array.from({ length: 24 }).map((_, i) => {
                     const h = 20 + Math.sin(i * 0.5) * 30 + Math.random() * 20;
                     return (
@@ -167,7 +167,7 @@ export default function Home() {
                         className="flex-1 rounded-t"
                         style={{
                           height: `${h}%`,
-                          background: `linear-gradient(to top, rgba(0,212,255,${0.15 + (i / 24) * 0.3}), rgba(0,212,255,0.05))`,
+                          background: `linear-gradient(to top, rgba(0,212,255,${0.25 + (i / 24) * 0.4}), rgba(0,212,255,0.08))`,
                         }}
                       />
                     );
@@ -186,10 +186,10 @@ export default function Home() {
             <div className="mb-16">
               <span className="text-xs tracking-[0.25em] uppercase text-accent font-medium">Capabilities</span>
               <h2 className="text-3xl md:text-5xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight mt-4 mb-4 max-w-2xl">
-                Inputs Become Intelligence
+                What We Build
               </h2>
               <p className="text-muted max-w-lg">
-                Each platform we build transforms raw industry data into decisions that move your business forward.
+                Each platform turns raw industry data into decisions. Here is what that looks like across our sectors.
               </p>
             </div>
           </ScrollReveal>

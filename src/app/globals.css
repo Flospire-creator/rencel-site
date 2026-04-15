@@ -2,11 +2,11 @@
 
 :root {
   --background: #0A0A0B;
-  --foreground: #EDEDED;
+  --foreground: #F0F0F0;
   --accent: #00D4FF;
-  --muted: #888888;
-  --card-bg: #111113;
-  --card-border: #1E1E22;
+  --muted: #9A9A9A;
+  --card-bg: #151518;
+  --card-border: #2A2A30;
 }
 
 @theme inline {
@@ -158,23 +158,23 @@ input, select, textarea, button {
 /* ===================== CARDS ===================== */
 
 .glass-card {
-  background: rgba(17, 17, 19, 0.6);
+  background: rgba(21, 21, 24, 0.8);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
   transition: all 0.4s cubic-bezier(0.16,1,0.3,1);
 }
 
 .glass-card:hover {
-  border-color: rgba(0,212,255,0.15);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.2), 0 0 0 1px rgba(0,212,255,0.05);
+  border-color: rgba(0,212,255,0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 0 1px rgba(0,212,255,0.08);
   transform: translateY(-2px);
 }
 
 /* Capability card — shows state change on hover */
 .capability-card {
-  background: rgba(17, 17, 19, 0.4);
+  background: rgba(21, 21, 24, 0.7);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
   transition: all 0.5s cubic-bezier(0.16,1,0.3,1);
   position: relative;
   overflow: hidden;
@@ -192,8 +192,8 @@ input, select, textarea, button {
 }
 
 .capability-card:hover {
-  border-color: rgba(0,212,255,0.12);
-  background: rgba(17, 17, 19, 0.7);
+  border-color: rgba(0,212,255,0.2);
+  background: rgba(21, 21, 24, 0.9);
   transform: translateY(-4px);
   box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 0 1px rgba(0,212,255,0.08);
 }

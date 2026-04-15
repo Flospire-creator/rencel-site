@@ -52,7 +52,7 @@ export default function InsightsPage() {
             Thinking Out Loud
           </h1>
           <p className="text-base md:text-lg text-muted max-w-xl leading-relaxed">
-            Notes on procurement technology, supply chain intelligence, and the work of building platforms for industries we know well.
+            Notes on procurement technology, supply chain intelligence, and building platforms for industries we know.
           </p>
         </div>
       </section>

@@ -21,6 +21,7 @@ const packages = [
       "Google Business Profile setup",
       "Basic SEO configuration",
       "Contact form with email routing",
+      "Online payment setup",
     ],
     highlight: false,
     cta: "Get Started",
@@ -49,7 +50,7 @@ const packages = [
     features: [
       "Everything in Grow",
       "Custom workflow automation",
-      "AI-powered tools (chatbot, lead scoring)",
+      "AI tools (chatbot, smart follow-ups)",
       "Third-party integrations (accounting, inventory)",
       "Customer portal or dashboard",
       "Advanced analytics and reporting",
@@ -68,7 +69,7 @@ const whyUs = [
   },
   {
     title: "Built by people who run businesses",
-    description: "We have managed supply chains across five continents. We understand operational complexity. Your digital setup reflects that experience.",
+    description: "We have built and run real businesses. We understand what it takes to keep things moving. Your digital setup reflects that experience.",
   },
   {
     title: "Systems that grow with you",
@@ -107,7 +108,7 @@ export default function DigitalPage() {
           </h1>
 
           <p className="text-base md:text-lg text-muted max-w-2xl leading-relaxed mb-10">
-            Website. Booking. Payments. CRM. Automation. AI tools. We set up your entire digital infrastructure so everything works together from day one. One partner. Everything connected.
+            We set up everything your business needs online. Website, bookings, payments, CRM, automation. All connected, all working together from day one.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3">
@@ -211,7 +212,7 @@ export default function DigitalPage() {
           </div>
 
           <p className="text-center text-xs text-muted mt-6">
-            All prices exclude VAT. Custom requirements? We will scope it properly and give you a fixed quote.
+            All prices exclude VAT. Hosting and tools typically run £20-50/month after setup. Custom requirements? We will scope it properly and give you a fixed quote.
           </p>
         </div>
       </section>

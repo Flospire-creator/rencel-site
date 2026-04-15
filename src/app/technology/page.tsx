@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 const services = [
   { title: "Automotive Data Intelligence", description: "Connected vehicle platforms, workshop analytics, and predictive maintenance systems for the automotive aftermarket. Real-time diagnostics and fleet intelligence delivered as managed SaaS." },
   { title: "Healthcare & Clinical Platforms", description: "Patient monitoring systems, clinical dashboards, and care coordination platforms for NHS trusts and private healthcare providers. Built to meet NHS Digital standards." },
-  { title: "AI Procurement Intelligence", description: "Platforms that turn procurement data into decisions. Spend analytics that surface hidden savings, supplier risk models that flag disruption early, and demand forecasting that keeps your pipeline healthy." },
-  { title: "Supply Chain Automation", description: "Intelligent workflows that handle the repetitive work. Automated purchase order processing, vendor onboarding, compliance checks, and exception routing. Your team focuses on strategy." },
+  { title: "AI Procurement Intelligence", description: "Platforms that turn procurement data into decisions. Spend analytics that surface hidden savings, supplier risk models that flag disruption early, and demand forecasting that gets ahead of shortfalls." },
+  { title: "Supply Chain Automation", description: "Intelligent workflows that handle the repetitive work. Automated purchase order processing, vendor onboarding, compliance checks, and exception routing. Freeing your team for strategy." },
   { title: "Custom SaaS Development", description: "Bespoke platforms built around your process. Industry portals, operational dashboards, and management tools. Enterprise-grade software your team will actually use." },
-  { title: "Data & Analytics Platforms", description: "Unified dashboards across operations, compliance, and performance. Real-time visibility that replaces spreadsheets and guesswork with clear, reliable data." },
+  { title: "Data & Analytics Platforms", description: "Unified dashboards across operations, compliance, and performance. Real-time visibility that replaces spreadsheets and guesswork with data you can trust." },
   { title: "Digital Twin Solutions", description: "Simulate complex operations before making changes. Model scenarios, test networks under stress, and find the best path forward without risking live systems." },
   { title: "Security & Compliance", description: "Every platform we ship meets enterprise standards. SOC 2 readiness, GDPR compliance, role-based access, and full audit trails. Built in from day one, not added later." },
 ];
@@ -80,7 +80,7 @@ export default function TechnologyPage() {
       <section className="py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)] mb-4">Have a Platform in Mind?</h2>
-          <p className="text-muted max-w-md mx-auto mb-8">Tell us what you need built. We will scope it, architect it, and deliver it with the domain knowledge to get it right.</p>
+          <p className="text-muted max-w-md mx-auto mb-8">Tell us what you need built. We will scope it, design it, and deliver it right.</p>
           <Link href="/contact" className="inline-flex px-6 py-3 bg-accent text-background font-semibold rounded-full text-sm hover:opacity-90 transition-opacity">Talk to Our Team</Link>
         </div>
       </section>
