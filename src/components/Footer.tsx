@@ -25,6 +25,7 @@ export function Footer() {
               {["AI Procurement Intelligence", "Supply Chain Automation", "Digital Twin Solutions", "Global Sourcing", "Logistics Management"].map((s) => (
                 <div key={s}><Link href={s.includes("Global") || s.includes("Logistics") ? "/sourcing" : "/technology"} className="text-sm text-muted hover:text-accent transition-colors">{s}</Link></div>
               ))}
+              <div className="pt-1"><Link href="/digital" className="text-sm text-accent/70 hover:text-accent transition-colors">Rencel Digital (SMEs)</Link></div>
             </div>
           </div>
 

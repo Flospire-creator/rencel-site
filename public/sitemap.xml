@@ -55,6 +55,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.rencelprocurements.co.uk/digital</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.rencelprocurements.co.uk/contact</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>yearly</changefreq>
