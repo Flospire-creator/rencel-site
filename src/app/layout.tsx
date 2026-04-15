@@ -84,6 +84,7 @@ export default function RootLayout({
         <WebSiteSchema />
       </head>
       <body>
+        <div className="noise-overlay" />
         <Navbar />
         <main>{children}</main>
         <Footer />
