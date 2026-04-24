@@ -9,6 +9,13 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "digital-agency-vs-digital-partner",
+    title: "Digital Agency vs Digital Partner: What Should a Small Business Choose?",
+    excerpt: "Most small businesses hire a digital agency when they actually need a digital partner. Here is the difference, why it matters, and how to tell which one you need.",
+    date: "2026-04-23",
+    category: "Small Business",
+  },
+  {
     slug: "small-business-website-cost-uk",
     title: "How Much Does a Small Business Website Cost in the UK?",
     excerpt: "Prices range from £500 to £15,000 and the gap is not about design quality. Here is what you actually pay for at each level, and how to work out what you need.",

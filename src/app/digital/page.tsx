@@ -3,11 +3,16 @@ import type { Metadata } from "next";
 import { LocalBusinessSchema, FAQSchema, BreadcrumbSchema } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Website Design & Digital Support for Small Businesses | Rencel Procurements Digital",
+  title: "Digital Agency for Small Businesses | Rencel Procurements Digital",
   description:
-    "Rencel Procurements Digital helps small businesses in Chippenham, Wiltshire and across the UK with website design, digital setup, tech support and procurement operations.",
+    "Rencel Procurements Digital is a digital agency for small businesses in Chippenham, Wiltshire and across the UK. Website design, digital setup, tech support and procurement operations.",
   alternates: { canonical: "/digital" },
   keywords: [
+    "digital agency small business",
+    "digital agency Chippenham",
+    "digital agency Wiltshire",
+    "digital agency UK",
+    "small business digital agency",
     "website design small business",
     "small business website Chippenham",
     "small business website Wiltshire",
@@ -212,8 +217,11 @@ export default function DigitalPage() {
             Website Design and Digital Support for Small Businesses
           </h1>
 
-          <p className="text-base md:text-lg text-muted max-w-2xl leading-relaxed mb-10">
-            Rencel Procurements Digital helps small businesses in Chippenham, Wiltshire and across the UK build practical websites, set up digital tools, improve operations and access procurement support. One partner for everything your business needs online.
+          <p className="text-base md:text-lg text-muted max-w-2xl leading-relaxed mb-6">
+            A digital agency for small businesses who want more than a website. We help small businesses in Chippenham, Wiltshire and across the UK build practical websites, set up digital tools, improve operations and access procurement support. One partner for everything your business needs online.
+          </p>
+          <p className="text-sm text-muted max-w-xl leading-relaxed mb-10">
+            <Link href="/digital/digital-agency-small-business" className="text-accent hover:underline">See how we compare to a typical digital agency &rarr;</Link>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3">
