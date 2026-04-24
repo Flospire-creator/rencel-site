@@ -33,6 +33,9 @@ export default function SourcingPage() {
           <p className="text-base md:text-lg text-muted max-w-xl leading-relaxed">
             20 years of hands-on procurement and supply chain management across global markets. We know the suppliers, the routes, and the risks.
           </p>
+          <p className="text-sm text-muted max-w-xl leading-relaxed mt-4">
+            Smaller business? See our <Link href="/digital/procurement-support" className="text-accent hover:underline">procurement support for small businesses</Link>.
+          </p>
         </div>
       </section>
 

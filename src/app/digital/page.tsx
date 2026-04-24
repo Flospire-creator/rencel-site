@@ -1,11 +1,67 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { LocalBusinessSchema, FAQSchema, BreadcrumbSchema } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Rencel Digital | Digital Infrastructure for Growing Businesses",
-  description: "We set up the systems your business runs on. Website, automation, CRM, AI tools. One partner, everything connected. Packages from £1,500.",
+  title: "Website Design & Digital Support for Small Businesses | Rencel Procurements Digital",
+  description:
+    "Rencel Procurements Digital helps small businesses in Chippenham, Wiltshire and across the UK with website design, digital setup, tech support and procurement operations.",
   alternates: { canonical: "/digital" },
+  keywords: [
+    "website design small business",
+    "small business website Chippenham",
+    "small business website Wiltshire",
+    "website redesign UK",
+    "digital setup small business",
+    "small business tech support",
+    "procurement support small business",
+    "business email setup",
+    "Stripe setup UK",
+    "booking system small business",
+  ],
+  openGraph: {
+    title: "Website Design & Digital Support for Small Businesses",
+    description:
+      "Practical websites, digital setup and procurement support for small businesses in Chippenham, Wiltshire and across the UK.",
+    url: "https://www.rencelprocurements.co.uk/digital",
+    type: "website",
+  },
 };
+
+const faqs = [
+  {
+    q: "Can you build a website for my small business?",
+    a: "Yes. Rencel Procurements Digital helps small businesses build practical, credible websites that explain what they offer, build trust and make it easier for customers to get in touch. We work with local service providers, trades, consultants, and small teams.",
+  },
+  {
+    q: "Do you work with businesses outside Chippenham?",
+    a: "Yes. We support businesses in Chippenham, Wiltshire and across the UK. Most of our work is delivered remotely with calls and screen shares, which keeps costs down and projects moving quickly.",
+  },
+  {
+    q: "Can you help me redesign my existing website?",
+    a: "Yes. We review your current website, identify what is unclear or underperforming, and improve the structure, content and user experience. Most redesigns take two to four weeks from brief to live.",
+  },
+  {
+    q: "Can you help set up Stripe, booking tools or business email?",
+    a: "Yes. We handle practical digital setup including payment links, Stripe, booking tools like Calendly or SavvyCal, domains, business email on Google Workspace or Microsoft 365, and simple operational systems.",
+  },
+  {
+    q: "Do you only offer websites, or do you also support business operations?",
+    a: "We support websites, digital setup and operational improvements. The focus is on helping small businesses run better, not just look better online. That includes connecting your tools so they talk to each other.",
+  },
+  {
+    q: "Can you help with procurement as well as digital setup?",
+    a: "Yes. Rencel combines 20 years of procurement experience with digital support. We help businesses improve supplier processes, purchasing workflows, and operational tools. This is a unique combination most agencies do not offer.",
+  },
+  {
+    q: "How much does a small business website cost?",
+    a: "Our packages start at £1,500 for a complete website with domain, email, SSL, SEO setup and payment processing. The Grow package at £3,500 adds booking and CRM. Scale starts at £7,500 and includes custom automation and AI tools. All prices exclude VAT.",
+  },
+  {
+    q: "How quickly can a small business website go live?",
+    a: "A Launch package website typically goes live in two to three weeks once we have your content and images. More complex projects with booking systems, payments and automation usually take four to six weeks.",
+  },
+];
 
 const packages = [
   {
@@ -62,68 +118,105 @@ const packages = [
   },
 ];
 
-const whyUs = [
+const services = [
   {
-    title: "One partner, not ten vendors",
-    description: "Website, email, CRM, automation, AI. We connect everything so you deal with one team, not a stack of disconnected tools.",
+    slug: "website-design-small-businesses",
+    title: "Website Design for Small Businesses",
+    description: "Simple, credible websites for local businesses, service providers, trades, consultants and small teams. We focus on what your customers need to see, not design awards.",
   },
   {
-    title: "Built by people who run businesses",
-    description: "We have built and run real businesses. We understand what it takes to keep things moving. Your digital setup reflects that experience.",
+    slug: "website-redesign",
+    title: "Website Redesign",
+    description: "If your current website is outdated, unclear or not converting, we will audit it and rebuild what is not working. Clearer message, better structure, stronger results.",
   },
   {
-    title: "Systems that grow with you",
-    description: "Start with a website. Add booking. Then automation. Then AI. Every piece is designed to connect to the next. No rip-and-replace later.",
+    slug: "digital-setup-small-businesses",
+    title: "Digital Setup",
+    description: "Domains, business email, payment links, Stripe, booking tools, forms, and basic automation. All set up properly and connected together from the start.",
   },
   {
-    title: "No jargon, no fluff",
-    description: "We tell you exactly what you get, what it costs, and how long it takes. If something is not worth doing, we will say so.",
+    slug: "procurement-support",
+    title: "Procurement Support",
+    description: "Supplier sourcing, purchasing workflows, process improvement and operational structure. 20 years of procurement experience applied to small business problems.",
+  },
+  {
+    slug: "small-business-tech-support",
+    title: "Small Business Tech Support",
+    description: "Practical help for owners who need digital tools set up and working, without the complexity. We handle the technical side so you can focus on running your business.",
+  },
+  {
+    slug: "chippenham-small-business-websites",
+    title: "Websites for Chippenham Businesses",
+    description: "Dedicated support for small businesses in Chippenham and the wider Wiltshire area. Local focus, national experience.",
   },
 ];
 
-const industries = [
-  "Trades and construction",
-  "Professional services",
-  "Healthcare and wellness",
-  "Hospitality and food",
-  "Retail and e-commerce",
-  "Property and lettings",
-  "Automotive and garages",
-  "Education and training",
+const whoWeWorkWith = [
+  "Small business owners",
+  "Local service businesses",
+  "Trades and repair businesses",
+  "Consultants",
+  "Wedding and events businesses",
+  "Startups",
+  "Procurement-led businesses",
+];
+
+const recentWork = [
+  {
+    name: "GarageIQ",
+    description: "Website and product positioning for an automotive repair platform.",
+  },
+  {
+    name: "Nnoo",
+    description: "Digital platform for wedding guest seating and guest messages.",
+  },
+  {
+    name: "Rencel Procurements",
+    description: "Procurement and digital operations support across five continents.",
+  },
 ];
 
 export default function DigitalPage() {
   return (
     <>
+      <LocalBusinessSchema />
+      <FAQSchema questions={faqs} />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://www.rencelprocurements.co.uk/" },
+          { name: "Rencel Digital", url: "https://www.rencelprocurements.co.uk/digital" },
+        ]}
+      />
+
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-44 md:pb-28 relative overflow-hidden">
+      <section className="pt-32 pb-16 md:pt-44 md:pb-20 relative overflow-hidden">
         <div className="hero-glow" />
         <div className="relative max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-accent/20 bg-accent/5 mb-6">
-            <span className="text-xs tracking-wider uppercase text-accent font-medium">Rencel Digital</span>
+            <span className="text-xs tracking-wider uppercase text-accent font-medium">Rencel Procurements Digital</span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-[family-name:var(--font-space-grotesk)] leading-[1] tracking-tight mb-6 max-w-4xl">
-            The Systems Your Business Runs On
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-[family-name:var(--font-space-grotesk)] leading-[1.05] tracking-tight mb-6 max-w-4xl">
+            Website Design and Digital Support for Small Businesses
           </h1>
 
           <p className="text-base md:text-lg text-muted max-w-2xl leading-relaxed mb-10">
-            We set up everything your business needs online. Website, bookings, payments, CRM, automation. All connected, all working together from day one.
+            Rencel Procurements Digital helps small businesses in Chippenham, Wiltshire and across the UK build practical websites, set up digital tools, improve operations and access procurement support. One partner for everything your business needs online.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3">
-            <a href="#packages" className="px-7 py-3.5 bg-accent text-background font-semibold rounded-full text-sm hover:shadow-[0_0_30px_rgba(0,212,255,0.3)] transition-all duration-300 text-center">
-              View Packages
-            </a>
+            <Link href="/contact" className="px-7 py-3.5 bg-accent text-background font-semibold rounded-full text-sm hover:shadow-[0_0_30px_rgba(0,212,255,0.3)] transition-all duration-300 text-center">
+              Book a Free Consultation
+            </Link>
             <Link href="/contact" className="px-7 py-3.5 border border-card-border rounded-full text-sm hover:border-accent/30 hover:bg-accent/5 transition-all duration-300 text-center">
-              Book a Call
+              Request a Website Review
             </Link>
           </div>
         </div>
       </section>
 
       {/* The Problem */}
-      <section className="py-20 md:py-28">
+      <section className="py-16 md:py-20">
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
@@ -131,7 +224,7 @@ export default function DigitalPage() {
                 You are running a business, not managing software.
               </h2>
               <p className="text-muted leading-relaxed">
-                Most small businesses end up with a website from one company, email from another, a booking tool that does not talk to anything, and a spreadsheet pretending to be a CRM. Nothing connects. Everything takes longer than it should.
+                Most small businesses end up with a website from one company, email from another, a booking tool that does not talk to anything, and a spreadsheet pretending to be a CRM. Nothing connects. Everything takes longer than it should. We fix that.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-3">
@@ -151,10 +244,40 @@ export default function DigitalPage() {
         </div>
       </section>
 
-      {/* Packages */}
-      <section id="packages" className="py-20 md:py-28 relative overflow-hidden mesh-gradient">
+      {/* Services */}
+      <section className="py-16 md:py-20 relative overflow-hidden mesh-gradient">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-14">
+          <div className="mb-12">
+            <span className="text-xs tracking-[0.25em] uppercase text-accent font-medium">Services</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight mt-4 mb-4 max-w-2xl">
+              What We Do for Small Businesses
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {services.map((service) => (
+              <Link
+                key={service.slug}
+                href={`/digital/${service.slug}`}
+                className="capability-card rounded-2xl p-6 md:p-7 block group"
+              >
+                <h3 className="text-lg font-semibold font-[family-name:var(--font-space-grotesk)] mb-2 group-hover:text-accent transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-muted leading-relaxed mb-4">{service.description}</p>
+                <span className="text-accent text-sm inline-flex items-center gap-1">
+                  Learn more <span className="transition-transform group-hover:translate-x-0.5">&rarr;</span>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Packages */}
+      <section id="packages" className="py-16 md:py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
             <span className="text-xs tracking-[0.25em] uppercase text-accent font-medium">Packages</span>
             <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight mt-4 mb-4">
               Clear Scope. Fixed Price. No Surprises.
@@ -217,39 +340,40 @@ export default function DigitalPage() {
         </div>
       </section>
 
-      {/* Why Us */}
-      <section className="py-20 md:py-28">
+      {/* Recent Work */}
+      <section className="py-16 md:py-20">
         <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight mb-4">
-              Why Rencel Digital
+          <div className="mb-10">
+            <span className="text-xs tracking-[0.25em] uppercase text-accent font-medium">Recent Work</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight mt-4 mb-4">
+              Projects We Have Shipped
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {whyUs.map((item) => (
-              <div key={item.title} className="capability-card rounded-2xl p-6 md:p-8">
-                <h3 className="text-base font-semibold font-[family-name:var(--font-space-grotesk)] mb-2">{item.title}</h3>
-                <p className="text-sm text-muted leading-relaxed">{item.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {recentWork.map((work) => (
+              <div key={work.name} className="capability-card rounded-2xl p-6">
+                <h3 className="text-base font-semibold font-[family-name:var(--font-space-grotesk)] mb-2">{work.name}</h3>
+                <p className="text-sm text-muted leading-relaxed">{work.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Industries */}
-      <section className="py-16">
+      {/* Who We Work With */}
+      <section className="py-12">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-8">
-            <span className="text-xs tracking-[0.25em] uppercase text-accent font-medium">Works For</span>
+            <span className="text-xs tracking-[0.25em] uppercase text-accent font-medium">Who We Work With</span>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-3">
-            {industries.map((industry) => (
+            {whoWeWorkWith.map((type) => (
               <span
-                key={industry}
+                key={type}
                 className="px-5 py-2.5 rounded-full border border-card-border text-sm text-muted hover:border-accent/20 hover:text-foreground transition-all duration-300 cursor-default"
               >
-                {industry}
+                {type}
               </span>
             ))}
           </div>
@@ -257,9 +381,9 @@ export default function DigitalPage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 md:py-28">
+      <section className="py-16 md:py-20">
         <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-14">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight mb-4">
               How It Works
             </h2>
@@ -282,19 +406,51 @@ export default function DigitalPage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-16 md:py-24 relative overflow-hidden mesh-gradient">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <span className="text-xs tracking-[0.25em] uppercase text-accent font-medium">FAQs</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight mt-4 mb-4">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq) => (
+              <details
+                key={faq.q}
+                className="group bg-card-bg/50 border border-card-border rounded-xl p-5 md:p-6 hover:border-accent/20 transition-colors"
+              >
+                <summary className="flex items-start justify-between cursor-pointer list-none gap-4">
+                  <h3 className="text-base md:text-lg font-semibold font-[family-name:var(--font-space-grotesk)]">{faq.q}</h3>
+                  <span className="text-accent text-lg shrink-0 transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="text-sm text-muted leading-relaxed mt-3 pt-3 border-t border-card-border">{faq.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="py-24 md:py-32 relative overflow-hidden">
+      <section className="py-20 md:py-28 relative overflow-hidden">
         <div className="hero-glow" style={{ top: "50%" }} />
-        <div className="relative max-w-4xl mx-auto px-6 text-center">
+        <div className="relative max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-5xl font-bold font-[family-name:var(--font-space-grotesk)] mb-5">
-            Let Us Set Up Your Systems
+            Need a Clearer Website?
           </h2>
           <p className="text-muted max-w-md mx-auto mb-8">
-            Book a 15-minute call. We will tell you exactly what you need, what it costs, and how quickly we can deliver it.
+            Send us a short note about what you need, and we will come back with practical next steps. Book a 15-minute call and we will tell you exactly what it will cost and how quickly we can deliver it.
           </p>
-          <Link href="/contact" className="inline-flex px-8 py-4 bg-accent text-background font-semibold rounded-full text-sm hover:shadow-[0_0_40px_rgba(0,212,255,0.3)] transition-all duration-300 animate-pulse-glow">
-            Book a Call
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link href="/contact" className="px-7 py-3.5 bg-accent text-background font-semibold rounded-full text-sm hover:shadow-[0_0_40px_rgba(0,212,255,0.3)] transition-all duration-300">
+              Book a Free Consultation
+            </Link>
+            <Link href="/contact" className="px-7 py-3.5 border border-card-border rounded-full text-sm hover:border-accent/30 hover:bg-accent/5 transition-all duration-300">
+              Request a Website Review
+            </Link>
+          </div>
         </div>
       </section>
     </>
