@@ -9,6 +9,48 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "small-business-website-cost-uk",
+    title: "How Much Does a Small Business Website Cost in the UK?",
+    excerpt: "Prices range from £500 to £15,000 and the gap is not about design quality. Here is what you actually pay for at each level, and how to work out what you need.",
+    date: "2026-04-22",
+    category: "Small Business",
+  },
+  {
+    slug: "what-small-business-website-needs",
+    title: "What Every Small Business Website Needs Before It Goes Live",
+    excerpt: "A website is not ready for customers just because the pages load. Here is the list we run through with every small business before we put anything live.",
+    date: "2026-04-20",
+    category: "Small Business",
+  },
+  {
+    slug: "how-to-set-up-stripe-small-business",
+    title: "How to Set Up Stripe Payments for a Small Business",
+    excerpt: "Stripe is the default choice for most UK small businesses taking card payments online. Here is how to set it up properly, and what to avoid.",
+    date: "2026-04-18",
+    category: "Small Business",
+  },
+  {
+    slug: "best-booking-tools-uk-small-business",
+    title: "Best Booking Tools for Small UK Businesses",
+    excerpt: "We have set up booking systems for trades, salons, consultants, and wedding businesses. Here are the tools that actually work, and when to use each.",
+    date: "2026-04-16",
+    category: "Small Business",
+  },
+  {
+    slug: "website-checklist-tradespeople",
+    title: "Website Checklist for Tradespeople and Local Service Businesses",
+    excerpt: "Plumbers, electricians, roofers, landscapers. The rules are the same and most trade websites get them wrong. This is the checklist we use.",
+    date: "2026-04-14",
+    category: "Small Business",
+  },
+  {
+    slug: "small-business-website-not-converting",
+    title: "Why Your Small Business Website Is Not Converting",
+    excerpt: "Traffic is not the problem. The problem is usually one of five things, and all of them are fixable without a full rebuild.",
+    date: "2026-04-12",
+    category: "Small Business",
+  },
+  {
     slug: "why-procurement-teams-need-their-own-platforms",
     title: "Why Procurement Teams Need Their Own Platforms",
     excerpt: "Most procurement software is built by engineers who have never raised a purchase order. That disconnect shows up in every workflow, every report, and every frustrated user.",

@@ -127,7 +127,11 @@ export function LocalBusinessSchema() {
       { "@type": "Place", name: "Bristol" },
       { "@type": "Place", name: "Bath" },
       { "@type": "Place", name: "Swindon" },
+      { "@type": "Place", name: "London" },
+      { "@type": "Place", name: "Miami" },
       { "@type": "Country", name: "United Kingdom" },
+      { "@type": "Country", name: "United States" },
+      { "@type": "Country", name: "Nigeria" },
     ],
     serviceType: [
       "Website design for small businesses",

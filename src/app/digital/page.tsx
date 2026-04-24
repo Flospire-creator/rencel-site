@@ -163,17 +163,29 @@ const whoWeWorkWith = [
 
 const recentWork = [
   {
-    name: "GarageIQ",
-    description: "Website and product positioning for an automotive repair platform.",
+    name: "Automotive Trade Platform",
+    description: "Website and go-to-market positioning for a connected vehicle intelligence startup serving the UK automotive aftermarket.",
   },
   {
-    name: "Nnoo",
-    description: "Digital platform for wedding guest seating and guest messages.",
+    name: "Events Technology Platform",
+    description: "Digital product for the wedding and events industry, covering guest experience and on-the-day coordination.",
   },
   {
-    name: "Rencel Procurements",
-    description: "Procurement and digital operations support across five continents.",
+    name: "Rencel Digital Operations",
+    description: "Website, sourcing workflows, and supplier management systems for our own procurement business across five continents.",
   },
+];
+
+const locations = [
+  "Chippenham",
+  "Bristol",
+  "Bath",
+  "Swindon",
+  "Wiltshire",
+  "London",
+  "United Kingdom",
+  "Miami, USA",
+  "Nigeria",
 ];
 
 export default function DigitalPage() {
@@ -208,8 +220,8 @@ export default function DigitalPage() {
             <Link href="/contact" className="px-7 py-3.5 bg-accent text-background font-semibold rounded-full text-sm hover:shadow-[0_0_30px_rgba(0,212,255,0.3)] transition-all duration-300 text-center">
               Book a Free Consultation
             </Link>
-            <Link href="/contact" className="px-7 py-3.5 border border-card-border rounded-full text-sm hover:border-accent/30 hover:bg-accent/5 transition-all duration-300 text-center">
-              Request a Website Review
+            <Link href="/digital/free-website-review" className="px-7 py-3.5 border border-card-border rounded-full text-sm hover:border-accent/30 hover:bg-accent/5 transition-all duration-300 text-center">
+              Request a Free Website Review
             </Link>
           </div>
         </div>
@@ -380,6 +392,67 @@ export default function DigitalPage() {
         </div>
       </section>
 
+      {/* Built by operators */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-xs tracking-[0.25em] uppercase text-accent font-medium">Credibility</span>
+              <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight mt-4 mb-5">
+                Built by operators, not just designers.
+              </h2>
+              <p className="text-muted leading-relaxed mb-4">
+                Rencel Procurements Digital is led by a team with 20+ years of procurement, operations and digital delivery experience across five continents. We have run real businesses, managed real supply chains, and delivered real technology projects.
+              </p>
+              <p className="text-muted leading-relaxed">
+                That means when we build your website or set up your digital tools, we think about how your business actually runs. Not just how the homepage looks. We build practical systems that support real operations.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="glass-card rounded-xl p-5">
+                <div className="text-2xl font-bold font-[family-name:var(--font-space-grotesk)] gradient-text mb-1">20+</div>
+                <div className="text-xs text-muted">Years in procurement and operations</div>
+              </div>
+              <div className="glass-card rounded-xl p-5">
+                <div className="text-2xl font-bold font-[family-name:var(--font-space-grotesk)] gradient-text mb-1">5</div>
+                <div className="text-xs text-muted">Continents with active operations</div>
+              </div>
+              <div className="glass-card rounded-xl p-5">
+                <div className="text-2xl font-bold font-[family-name:var(--font-space-grotesk)] gradient-text mb-1">100+</div>
+                <div className="text-xs text-muted">Clients across industries</div>
+              </div>
+              <div className="glass-card rounded-xl p-5">
+                <div className="text-2xl font-bold font-[family-name:var(--font-space-grotesk)] gradient-text mb-1">£100M+</div>
+                <div className="text-xs text-muted">Portfolio managed</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Local trust */}
+      <section className="py-16 md:py-20 relative overflow-hidden">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <span className="text-xs tracking-[0.25em] uppercase text-accent font-medium">Where We Work</span>
+          <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight mt-4 mb-4">
+            Supporting Small Businesses Across the UK, USA and Africa
+          </h2>
+          <p className="text-muted max-w-2xl mx-auto leading-relaxed mb-10">
+            We are based in Bristol with strong local roots in Chippenham, Wiltshire, Bath, Swindon and London. Our wider team and supplier network extends to Miami, USA and Nigeria. Most of our work is delivered remotely, so we can support any small business across the UK without a travel premium.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {locations.map((loc) => (
+              <span
+                key={loc}
+                className="px-4 py-2 rounded-full border border-card-border text-sm text-muted hover:border-accent/20 hover:text-foreground transition-all duration-300 cursor-default"
+              >
+                {loc}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* How It Works */}
       <section className="py-16 md:py-20">
         <div className="max-w-5xl mx-auto px-6">
@@ -447,8 +520,8 @@ export default function DigitalPage() {
             <Link href="/contact" className="px-7 py-3.5 bg-accent text-background font-semibold rounded-full text-sm hover:shadow-[0_0_40px_rgba(0,212,255,0.3)] transition-all duration-300">
               Book a Free Consultation
             </Link>
-            <Link href="/contact" className="px-7 py-3.5 border border-card-border rounded-full text-sm hover:border-accent/30 hover:bg-accent/5 transition-all duration-300">
-              Request a Website Review
+            <Link href="/digital/free-website-review" className="px-7 py-3.5 border border-card-border rounded-full text-sm hover:border-accent/30 hover:bg-accent/5 transition-all duration-300">
+              Request a Free Website Review
             </Link>
           </div>
         </div>
