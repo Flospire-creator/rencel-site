@@ -7,13 +7,68 @@ export const metadata: Metadata = {
   alternates: { canonical: "/work" },
 };
 
-const projects = [
-  { category: "Technology", title: "Automotive Intelligence as a Service", description: "Building a connected intelligence platform for the UK automotive aftermarket. Vehicle data, workshop operations, and predictive analytics unified into a single managed service for the trade.", tags: ["Automotive", "SaaS", "AI/ML", "Platform"] },
-  { category: "Technology", title: "Remote Patient Monitoring Platform", description: "Designed a clinical monitoring and care coordination platform for NHS virtual ward programmes. Real-time patient observations, automated clinical scoring, and clinician alerting built to NHS Digital standards.", tags: ["Healthcare", "NHS", "SaaS", "Clinical"] },
-  { category: "Technology", title: "Procurement Spend Analytics Engine", description: "AI-powered spend classification and savings identification platform for a mid-market energy company. Reduced procurement cycle time by 40% in the first quarter.", tags: ["AI/ML", "Analytics", "Energy"] },
-  { category: "Technology", title: "Supply Chain Automation Suite", description: "Automated purchase order processing, vendor compliance workflows, and exception routing for a multinational manufacturer with 200+ active suppliers.", tags: ["Automation", "Integration", "Enterprise"] },
-  { category: "Sourcing", title: "Pan-African Supplier Network", description: "Established and managed a qualified supplier network across 12 African countries. End-to-end procurement support for upstream oil and gas operations.", tags: ["Global Sourcing", "Oil & Gas", "Africa"] },
-  { category: "Sourcing", title: "Critical Equipment Procurement", description: "Time-sensitive sourcing and logistics for a refinery turnaround. Delivered specialist equipment from three continents within a four-week window.", tags: ["Procurement", "Energy", "Logistics"] },
+interface Project {
+  slug?: string;
+  category: string;
+  title: string;
+  description: string;
+  tags: string[];
+  status?: "In Development" | "Live Case Study";
+}
+
+const projects: Project[] = [
+  {
+    slug: "our-own-rebuild",
+    category: "Digital Transformation",
+    title: "Rebuilding Our Own Brand",
+    description: "We took Rencel from an expired-SSL dead site to an AI-optimised intelligence platform in four weeks. New positioning, new design, new stack, 24 indexed pages.",
+    tags: ["Web", "Branding", "SEO", "Meta"],
+    status: "Live Case Study",
+  },
+  {
+    slug: "spend-analytics-engine",
+    category: "Procurement Intelligence",
+    title: "Procurement Spend Analytics Engine",
+    description: "AI-powered spend classification and savings identification for a mid-market energy company. Turned 18 months of messy ERP data into actionable procurement decisions.",
+    tags: ["AI/ML", "Analytics", "Energy"],
+    status: "Live Case Study",
+  },
+  {
+    slug: "pan-african-supplier-network",
+    category: "Global Sourcing",
+    title: "Pan-African Supplier Network",
+    description: "Qualified supplier network across 12 African countries supporting upstream oil and gas operations. 40+ framework agreements, 25% cost reduction on substituted categories.",
+    tags: ["Global Sourcing", "Oil & Gas", "Africa"],
+    status: "Live Case Study",
+  },
+  {
+    slug: "refinery-equipment-procurement",
+    category: "Procurement & Logistics",
+    title: "Refinery Turnaround Procurement",
+    description: "Time-critical sourcing and logistics for a refinery turnaround. Specialist equipment delivered from three continents within a four-week window. Zero delay.",
+    tags: ["Procurement", "Energy", "Logistics"],
+    status: "Live Case Study",
+  },
+  {
+    category: "Technology",
+    title: "Automotive Intelligence as a Service",
+    description: "Building a connected intelligence platform for the UK automotive aftermarket. Vehicle data, workshop operations, and predictive analytics unified into a single managed service for the trade.",
+    tags: ["Automotive", "SaaS", "AI/ML", "Platform"],
+    status: "In Development",
+  },
+  {
+    category: "Technology",
+    title: "Remote Patient Monitoring Platform",
+    description: "Designing a clinical monitoring and care coordination platform for NHS virtual ward programmes. Real-time patient observations, automated clinical scoring, and clinician alerting built to NHS Digital standards.",
+    tags: ["Healthcare", "NHS", "SaaS", "Clinical"],
+    status: "In Development",
+  },
+  {
+    category: "Technology",
+    title: "Supply Chain Automation Suite",
+    description: "Automated purchase order processing, vendor compliance workflows, and exception routing for multinational manufacturing operations.",
+    tags: ["Automation", "Integration", "Enterprise"],
+  },
 ];
 
 export default function WorkPage() {
@@ -29,7 +84,7 @@ export default function WorkPage() {
             What We Have Built
           </h1>
           <p className="text-base md:text-lg text-muted max-w-xl leading-relaxed">
-            Platforms we have built and sourcing work we have done.
+            Platforms we have built and sourcing work we have done. Case studies below are anonymised where client confidentiality applies.
           </p>
         </div>
       </section>
@@ -37,18 +92,44 @@ export default function WorkPage() {
       <section className="pb-20 md:pb-28">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {projects.map((p) => (
-              <div key={p.title} className="p-6 rounded-xl bg-card-bg border border-card-border hover:border-accent/20 transition-colors">
-                <div className="text-xs text-accent uppercase tracking-wider mb-3">{p.category}</div>
-                <h3 className="text-base font-semibold font-[family-name:var(--font-space-grotesk)] mb-2">{p.title}</h3>
-                <p className="text-sm text-muted leading-relaxed mb-4">{p.description}</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {p.tags.map((t) => (
-                    <span key={t} className="text-xs px-2.5 py-1 rounded-full border border-card-border text-muted">{t}</span>
-                  ))}
+            {projects.map((p) => {
+              const CardContent = (
+                <div className="p-6 rounded-xl bg-card-bg border border-card-border hover:border-accent/20 transition-colors h-full flex flex-col">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="text-xs text-accent uppercase tracking-wider">{p.category}</div>
+                    {p.status && (
+                      <span className={`text-[10px] px-2 py-1 rounded-full border ${
+                        p.status === "Live Case Study"
+                          ? "border-accent/30 text-accent bg-accent/5"
+                          : "border-card-border text-muted"
+                      }`}>
+                        {p.status}
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="text-base font-semibold font-[family-name:var(--font-space-grotesk)] mb-2">{p.title}</h3>
+                  <p className="text-sm text-muted leading-relaxed mb-4 flex-1">{p.description}</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {p.tags.map((t) => (
+                      <span key={t} className="text-xs px-2.5 py-1 rounded-full border border-card-border text-muted">{t}</span>
+                    ))}
+                  </div>
+                  {p.slug && (
+                    <div className="mt-4 text-sm text-accent">
+                      Read case study &rarr;
+                    </div>
+                  )}
                 </div>
-              </div>
-            ))}
+              );
+
+              return p.slug ? (
+                <Link key={p.title} href={`/work/${p.slug}`} className="block group">
+                  {CardContent}
+                </Link>
+              ) : (
+                <div key={p.title}>{CardContent}</div>
+              );
+            })}
           </div>
         </div>
       </section>
