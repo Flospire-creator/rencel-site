@@ -341,7 +341,10 @@ export default function DigitalPage() {
                   <span className="text-xs tracking-wider uppercase text-accent font-medium">Start Here</span>
                 </div>
                 <p className="text-sm text-muted leading-relaxed">
-                  Not ready to commit to a build? Get expert eyes on your current setup, a written audit, a 90-minute strategy call and a 12-month roadmap. Fully credited against any package you book within 60 days.
+                  Not ready to commit to a build? Get expert eyes on your current setup, a written audit, a 90-minute strategy call and a 12-month roadmap.
+                </p>
+                <p className="text-xs text-muted/80 leading-relaxed mt-2">
+                  Paid upfront. Credited against any package booked within 60 days, so you lose nothing if you go ahead.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row md:flex-col items-start sm:items-center md:items-end gap-3 md:gap-2 md:shrink-0">
