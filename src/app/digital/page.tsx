@@ -60,23 +60,25 @@ const faqs = [
   },
   {
     q: "How much does a small business website cost?",
-    a: "Our packages start at £1,500 for a complete website with domain, email, SSL, SEO setup and payment processing. The Grow package at £3,500 adds booking and CRM. Scale starts at £7,500 and includes custom automation and AI tools. All prices exclude VAT.",
+    a: "Our Launch package at £3,500 includes a complete website with cloud hosting, domain, business email, SSL, SEO setup and payment processing, live in 2-3 weeks. The Grow package at £5,000 adds booking and CRM. Scale starts at £10,000 for custom automation and AI tools. Our Platform tier (£15,000-£30,000+) covers custom SaaS products and intelligence platforms. For businesses who want expert guidance before committing to a build, our Digital Audit & Roadmap is £450. All prices exclude VAT.",
   },
   {
     q: "How quickly can a small business website go live?",
-    a: "A Launch package website typically goes live in two to three weeks once we have your content and images. More complex projects with booking systems, payments and automation usually take four to six weeks.",
+    a: "A Launch package website typically goes live in two to three weeks once we have your content and images. Grow projects with booking and CRM take four to six weeks. Scale builds run six to ten weeks. Platform builds for SaaS products and custom intelligence platforms run eight to fourteen weeks.",
   },
 ];
 
 const packages = [
   {
     name: "Launch",
-    price: "£1,500",
+    price: "£3,500",
+    timeline: "Live in 2-3 weeks",
     description: "Everything you need to get online and look professional.",
     features: [
       "Custom website (up to 5 pages)",
       "Mobile responsive design",
-      "Domain and hosting setup",
+      "Cloud hosting setup (year 1 included)",
+      "Domain registration and configuration",
       "Business email configuration",
       "SSL certificate and security",
       "Google Business Profile setup",
@@ -89,7 +91,8 @@ const packages = [
   },
   {
     name: "Grow",
-    price: "£3,500",
+    price: "£5,000",
+    timeline: "Live in 4-6 weeks",
     description: "Your business runs smoother. Clients book, pay, and come back.",
     features: [
       "Everything in Launch",
@@ -99,14 +102,16 @@ const packages = [
       "Email marketing setup",
       "Google Analytics and tracking",
       "Social media integration",
+      "Managed cloud hosting (year 1 included)",
       "3 months of support included",
     ],
     highlight: true,
-    cta: "Most Popular",
+    cta: "Get Started",
   },
   {
     name: "Scale",
-    price: "£7,500+",
+    price: "£10,000+",
+    timeline: "Live in 6-10 weeks",
     description: "Custom systems built around how your business actually works.",
     features: [
       "Everything in Grow",
@@ -116,10 +121,30 @@ const packages = [
       "Customer portal or dashboard",
       "Advanced analytics and reporting",
       "Staff training and documentation",
+      "Managed cloud hosting (year 1 included)",
       "6 months of priority support",
     ],
     highlight: false,
     cta: "Talk to Us",
+  },
+  {
+    name: "Platform",
+    price: "£15,000-£30,000+",
+    timeline: "Live in 8-14 weeks",
+    description: "Custom intelligence platforms and SaaS products. Production-grade from day one.",
+    features: [
+      "Multi-user platform or SaaS product",
+      "Custom architecture and database design",
+      "Authentication and user management",
+      "Admin panel and analytics dashboard",
+      "AI and data pipelines where needed",
+      "Stripe and third-party API integrations",
+      "Enterprise-grade security",
+      "Managed cloud hosting and DevOps (year 1 included)",
+      "12 months of priority support",
+    ],
+    highlight: false,
+    cta: "Scope a Project",
   },
 ];
 
@@ -296,7 +321,7 @@ export default function DigitalPage() {
 
       {/* Packages */}
       <section id="packages" className="py-16 md:py-20">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <span className="text-xs tracking-[0.25em] uppercase text-accent font-medium">Packages</span>
             <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight mt-4 mb-4">
@@ -307,25 +332,50 @@ export default function DigitalPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {/* Digital Audit entry-level card */}
+          <div className="max-w-4xl mx-auto mb-10">
+            <div className="rounded-2xl p-6 md:p-7 bg-card-bg/40 border border-card-border flex flex-col md:flex-row md:items-center gap-5 md:gap-8">
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-2">
+                  <h3 className="text-lg font-semibold font-[family-name:var(--font-space-grotesk)]">Digital Audit & Roadmap</h3>
+                  <span className="text-xs tracking-wider uppercase text-accent font-medium">Start Here</span>
+                </div>
+                <p className="text-sm text-muted leading-relaxed">
+                  Not ready to commit to a build? Get expert eyes on your current setup, a written audit, a 90-minute strategy call and a 12-month roadmap. Fully credited against any package you book within 60 days.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row md:flex-col items-start sm:items-center md:items-end gap-3 md:gap-2 md:shrink-0">
+                <div className="text-2xl font-bold font-[family-name:var(--font-space-grotesk)] gradient-text">£450</div>
+                <Link
+                  href="/contact"
+                  className="px-5 py-2.5 rounded-full text-sm font-semibold border border-card-border hover:border-accent/30 hover:bg-accent/5 transition-all duration-300 whitespace-nowrap"
+                >
+                  Book Audit
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
             {packages.map((pkg) => (
               <div
                 key={pkg.name}
-                className={`rounded-2xl p-6 md:p-8 flex flex-col relative ${
+                className={`rounded-2xl p-6 md:p-7 flex flex-col relative ${
                   pkg.highlight
                     ? "bg-card-bg border-2 border-accent/30 shadow-[0_0_40px_rgba(0,212,255,0.08)]"
                     : "bg-card-bg/50 border border-card-border"
                 }`}
               >
                 {pkg.highlight && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-accent text-background text-xs font-semibold rounded-full">
-                    Recommended
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-accent text-background text-xs font-semibold rounded-full whitespace-nowrap">
+                    Most Popular
                   </div>
                 )}
 
                 <div className="mb-6">
                   <h3 className="text-lg font-semibold font-[family-name:var(--font-space-grotesk)] mb-1">{pkg.name}</h3>
-                  <div className="text-3xl font-bold font-[family-name:var(--font-space-grotesk)] gradient-text mb-2">{pkg.price}</div>
+                  <div className="text-3xl font-bold font-[family-name:var(--font-space-grotesk)] gradient-text mb-1">{pkg.price}</div>
+                  <div className="text-xs uppercase tracking-wider text-accent font-medium mb-3">{pkg.timeline}</div>
                   <p className="text-sm text-muted">{pkg.description}</p>
                 </div>
 
@@ -354,8 +404,8 @@ export default function DigitalPage() {
             ))}
           </div>
 
-          <p className="text-center text-xs text-muted mt-6">
-            All prices exclude VAT. Hosting and tools typically run £20-50/month after setup. Custom requirements? We will scope it properly and give you a fixed quote.
+          <p className="text-center text-xs text-muted mt-6 max-w-2xl mx-auto">
+            All prices exclude VAT. Cloud hosting included for year 1. From year 2, hosting and tools typically run £20-80/month depending on package. Custom requirements? We will scope it properly and give you a fixed quote.
           </p>
         </div>
       </section>
