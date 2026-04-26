@@ -5,7 +5,7 @@ import { LocalBusinessSchema, FAQSchema, BreadcrumbSchema } from "@/components/S
 export const metadata: Metadata = {
   title: "Digital Agency for Small Businesses | Rencel Procurements Digital",
   description:
-    "Rencel Procurements Digital is a digital agency for small businesses in Chippenham, Wiltshire and across the UK. Website design, digital setup, tech support and procurement operations.",
+    "Rencel Digital is a digital agency for small businesses across the UK. Website design, digital setup, tech support and procurement operations.",
   alternates: { canonical: "/digital" },
   keywords: [
     "digital agency small business",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Website Design & Digital Support for Small Businesses",
     description:
-      "Practical websites, digital setup and procurement support for small businesses in Chippenham, Wiltshire and across the UK.",
+      "Practical websites, digital setup and procurement support for small businesses across the UK.",
     url: "https://www.rencelprocurements.co.uk/digital",
     type: "website",
   },
@@ -39,8 +39,8 @@ const faqs = [
     a: "Yes. Rencel Procurements Digital helps small businesses build practical, credible websites that explain what they offer, build trust and make it easier for customers to get in touch. We work with local service providers, trades, consultants, and small teams.",
   },
   {
-    q: "Do you work with businesses outside Chippenham?",
-    a: "Yes. We support businesses in Chippenham, Wiltshire and across the UK. Most of our work is delivered remotely with calls and screen shares, which keeps costs down and projects moving quickly.",
+    q: "Where in the UK do you work?",
+    a: "We support small businesses across the UK. Most of our work is delivered remotely with calls and screen shares, which keeps costs down and projects moving quickly. We have particularly strong local presence in Bristol, Bath, Swindon, Wiltshire and London if you prefer in-person meetings.",
   },
   {
     q: "Can you help me redesign my existing website?",
@@ -176,8 +176,8 @@ const services = [
   },
   {
     slug: "chippenham-small-business-websites",
-    title: "Websites for Chippenham Businesses",
-    description: "Dedicated support for small businesses in Chippenham and the wider Wiltshire area. Local focus, national experience.",
+    title: "UK-Wide with Local Presence",
+    description: "Dedicated UK coverage with strong local presence in Bristol, Bath, Wiltshire and Chippenham. National reach, local focus.",
   },
 ];
 
@@ -243,7 +243,7 @@ export default function DigitalPage() {
           </h1>
 
           <p className="text-base md:text-lg text-muted max-w-2xl leading-relaxed mb-6">
-            A digital agency for small businesses who want more than a website. We help small businesses in Chippenham, Wiltshire and across the UK build practical websites, set up digital tools, improve operations and access procurement support. One partner for everything your business needs online.
+            A digital agency for small businesses across the UK who want more than a website. We help small businesses build practical websites, set up digital tools, improve operations and access procurement support. One partner for everything your business needs online.
           </p>
           <p className="text-sm text-muted max-w-xl leading-relaxed mb-10">
             <Link href="/digital/digital-agency-small-business" className="text-accent hover:underline">See how we compare to a typical digital agency &rarr;</Link>

@@ -110,10 +110,10 @@ export function LocalBusinessSchema() {
     logo: "https://www.rencelprocurements.co.uk/favicon.svg",
     image: "https://www.rencelprocurements.co.uk/favicon.svg",
     description:
-      "Rencel Procurements Digital helps small businesses in Chippenham, Wiltshire and across the UK build practical websites, set up digital tools, improve operations and access procurement support.",
+      "Rencel Digital helps small businesses across the UK build practical websites, set up digital tools, improve operations and access procurement support.",
     telephone: "+44-1934-515563",
     email: "info@rencelprocurements.co.uk",
-    priceRange: "£1,500 - £7,500+",
+    priceRange: "£450 - £30,000+",
     address: {
       "@type": "PostalAddress",
       streetAddress: "162 High Street",
