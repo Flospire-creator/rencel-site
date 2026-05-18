@@ -31,7 +31,7 @@ export default function Page() {
         },
         {
           heading: "What it costs",
-          body: "A full digital setup, included in our £3,500 Grow package, covers everything most small businesses need: website, email, payments, booking, CRM, and analytics.\n\nIf you just need specific tools set up without a full website project, we do that too. Stripe and payments setup alone is around £300. Booking system setup is £400. Full CRM configuration is £600. Quote requests are free.",
+          body: "A full digital setup, included in our £7,500 Grow package (or £750/month over 12 months), covers everything most small businesses need: website, email, payments, booking, CRM, customer journey tracking, and analytics.\n\nIf you just need specific tools set up without a full website project, we do that too. Stripe and payments setup alone is around £300. Booking system setup is £400. Full CRM configuration is £600. Quote requests are free.",
         },
       ]}
       faqs={[

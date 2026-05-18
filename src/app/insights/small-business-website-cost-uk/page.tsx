@@ -5,7 +5,7 @@ import { BlogPost, H2, Lead } from "@/components/BlogPost";
 export const metadata: Metadata = {
   title: "How Much Does a Small Business Website Cost in the UK?",
   description:
-    "Prices range from £500 to £15,000 and the gap is not about design quality. Here is what you pay for at each level and how to work out what you need.",
+    "Prices range from £500 to £30,000 and the gap is not about design quality. Here is what you pay for at each level and how to work out what you need.",
   alternates: { canonical: "/insights/small-business-website-cost-uk" },
 };
 
@@ -16,10 +16,10 @@ export default function Page() {
       date="22 April 2026"
       isoDate="2026-04-22"
       slug="small-business-website-cost-uk"
-      description="Prices range from £500 to £15,000 and the gap is not about design quality. Here is what you pay for at each level and how to work out what you need."
+      description="Prices range from £500 to £30,000 and the gap is not about design quality. Here is what you pay for at each level and how to work out what you need."
       title="How Much Does a Small Business Website Cost in the UK?"
       ctaHeading="Thinking about a website?"
-      ctaBody="Our fixed-price packages start at £1,500 with everything most small businesses need included."
+      ctaBody="Our fixed-price packages start at £4,500 (or £450/month over 12 months) with everything most small businesses need included."
       ctaLink="/digital"
       ctaLabel="See our packages"
     >
@@ -41,37 +41,43 @@ export default function Page() {
         It can work for a first-year side hustle or a business that only needs a holding page. The downside is time. Most owners spend twenty to forty hours getting it to look right, plus another five hours a month maintaining it. If you value your time at £30 an hour, a DIY site has already cost you £1,500 before you have added anything.
       </p>
 
-      <H2>£500 to £1,500: the freelancer range</H2>
+      <H2>£500 to £2,000: the freelancer range</H2>
 
       <p>
         A freelancer picks a template, tweaks it for your brand, and hands it over. You usually get three to five pages, a contact form, and basic setup. It is a step up from DIY and good value if the freelancer is competent.
       </p>
 
       <p>
-        Where it gets expensive is what is not included. Often no domain setup, no business email, no payment tools, no SEO, no analytics. You end up either doing those yourself or hiring someone else. The total cost of getting fully online often ends up closer to £2,500.
+        Where it gets expensive is what is not included. Often no domain setup, no business email, no payment tools, no SEO, no analytics. You end up either doing those yourself or hiring someone else. The total cost of getting fully online often ends up closer to £3,000.
       </p>
 
-      <H2>£1,500 to £5,000: the small agency range</H2>
+      <H2>£2,500 to £8,000: the small agency range</H2>
 
       <p>
-        This is where most serious small businesses land. You get a proper scope, a designed-from-scratch site (not a template), and all the supporting setup included. Domain, business email, SSL, SEO configuration, Google Business Profile, payment processing, contact forms that actually work on mobile.
-      </p>
-
-      <p>
-        Our <Link href="/digital" className="text-accent hover:underline">Launch package at £1,500</Link> sits at the lower end of this bracket. The <Link href="/digital" className="text-accent hover:underline">Grow package at £3,500</Link> adds booking, CRM, and three months of support. For most small businesses, this is the right range.
-      </p>
-
-      <H2>£5,000 to £15,000: the custom range</H2>
-
-      <p>
-        Custom functionality. Bespoke integrations. Member areas, booking flows that connect to external systems, custom calculators, AI features, multi-language support. You are usually replacing several tools at once or building something that does not exist off the shelf.
+        This is where most serious small businesses land. You get a proper scope, a designed-from-scratch site (not a template), and all the supporting setup included. Cloud hosting, domain, business email, SSL, SEO configuration, Google Business Profile, payment processing, contact forms that actually work on mobile.
       </p>
 
       <p>
-        If you are a standard service business, you probably do not need this. If you are automating a specific workflow or combining several business functions into one platform, it can pay for itself quickly. Our <Link href="/digital" className="text-accent hover:underline">Scale package starts at £7,500</Link>.
+        Our <Link href="/digital" className="text-accent hover:underline">Launch package at £4,500</Link> sits in this bracket. The <Link href="/digital" className="text-accent hover:underline">Grow package at £7,500</Link> adds booking, CRM, customer journey tracking and three months of support. Both can be paid monthly. For most small businesses, this is the right range.
       </p>
 
-      <H2>£15,000 and up: the big agency range</H2>
+      <H2>£8,000 to £20,000: the custom range</H2>
+
+      <p>
+        Custom functionality. Bespoke integrations. Member areas, booking flows that connect to external systems, custom calculators, AI features, conversion funnel analytics with session recordings, multi-language support. You are usually replacing several tools at once or building something that does not exist off the shelf.
+      </p>
+
+      <p>
+        If you are a standard service business, you probably do not need this. If you are automating a specific workflow or combining several business functions into one platform, it can pay for itself quickly. Our <Link href="/digital" className="text-accent hover:underline">Scale package starts at £15,000</Link>.
+      </p>
+
+      <H2>£15,000 to £30,000+: the bespoke and SaaS range</H2>
+
+      <p>
+        Multi-user platforms. SaaS products. Custom intelligence platforms with admin panels, authentication, AI and data pipelines, and enterprise-grade security. You are not building a website any more, you are building a product. Our <Link href="/digital" className="text-accent hover:underline">Platform tier</Link> sits here.
+      </p>
+
+      <H2>£30,000 and up: the big agency range</H2>
 
       <p>
         You are paying for a team. Project manager, designer, developer, copywriter, SEO specialist. For a growing business with real complexity this can make sense. For a small business with a £250,000 turnover, it is almost never the right spend.
@@ -112,7 +118,7 @@ export default function Page() {
       <H2>The honest answer</H2>
 
       <p>
-        For most UK small businesses, budget between £1,500 and £3,500 for a website that will genuinely help your business. Below that, you will pay in time or missing features. Above that, you need a specific reason for the extra spend.
+        For most UK small businesses, budget between £4,500 and £7,500 for a website that will genuinely help your business. Below that, you will pay in time or missing features. Above that, you need a specific reason for the extra spend (custom automation, SaaS-style functionality, or building a product rather than a brochure).
       </p>
     </BlogPost>
   );

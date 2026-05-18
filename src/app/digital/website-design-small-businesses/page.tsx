@@ -14,7 +14,7 @@ export default function Page() {
       slug="website-design-small-businesses"
       title="Website Design for Small Businesses"
       h1="Website Design for Small Businesses"
-      description="Practical website design for small businesses that need a clear, credible online presence. Fixed prices from £1,500."
+      description="Practical website design for small businesses that need a clear, credible online presence. Fixed prices from £4,500."
       intro="Rencel Procurements Digital builds simple, credible websites for small businesses, local service providers, trades, consultants and small teams. Websites that explain what you do, build trust, and make it easy for customers to get in touch."
       sections={[
         {
@@ -27,7 +27,7 @@ export default function Page() {
         },
         {
           heading: "What is included",
-          body: "Every Launch package website includes a custom-designed site of up to five pages, mobile-responsive design, your domain and hosting set up properly, business email configured, SSL and security, basic SEO configuration, Google Business Profile setup, a contact form wired to your email, and online payment setup if you need it.\n\nAll for a fixed price of £1,500. No hourly rates. No scope creep. No surprises at the end. We tell you exactly what you get before we start.",
+          body: "Every Launch package website includes a custom-designed site of up to five pages, mobile-responsive design, cloud hosting set up properly (year 1 included), your domain configured, business email set up, SSL and security, basic SEO configuration, Google Business Profile setup, a contact form wired to your email, and online payment setup if you need it.\n\nAll for a fixed price of £4,500, or £450/month over 12 months. No hourly rates. No scope creep. No surprises at the end. We tell you exactly what you get before we start.",
         },
         {
           heading: "How long it takes",

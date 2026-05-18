@@ -4,7 +4,7 @@ import { ServicePage } from "@/components/ServicePage";
 export const metadata: Metadata = {
   title: "Small Business Website Design in Chippenham | Rencel Procurements Digital",
   description:
-    "Website design for small businesses in Chippenham and Wiltshire. Local focus, national experience. Fixed prices from £1,500.",
+    "Website design for small businesses in Chippenham and Wiltshire. Local focus, national experience. Fixed prices from £4,500.",
   alternates: { canonical: "/digital/chippenham-small-business-websites" },
 };
 
@@ -15,7 +15,7 @@ export default function Page() {
       title="Chippenham Small Business Websites"
       h1="Website Design for Chippenham Businesses"
       description="Dedicated website and digital support for small businesses in Chippenham and the wider Wiltshire area."
-      intro="Rencel works with small businesses across Chippenham, Wiltshire and the surrounding areas. Local focus, national experience. Fixed-price packages from £1,500, with most projects delivered in two to four weeks."
+      intro="Rencel works with small businesses across Chippenham, Wiltshire and the surrounding areas. Local focus, national experience. Fixed-price packages from £4,500 (or £450/month over 12 months), with most projects delivered in two to four weeks."
       sections={[
         {
           heading: "Why local matters",
@@ -31,7 +31,7 @@ export default function Page() {
         },
         {
           heading: "What you get",
-          body: "The Launch package at £1,500 includes everything most local small businesses need: a five-page website, mobile-responsive design, your domain and business email set up, SSL and security, Google Business Profile configured properly, basic SEO optimised for local search, a contact form, and online payment setup.\n\nMost projects go live in two to three weeks. We come back to you for content, images, and review points. You do not need to be technical. We handle the technical side so you can focus on running your business.",
+          body: "The Launch package at £4,500 (or £450/month over 12 months) includes everything most local small businesses need: a five-page website, mobile-responsive design, cloud hosting (year 1 included), your domain and business email set up, SSL and security, Google Business Profile configured properly, basic SEO optimised for local search, a contact form, and online payment setup.\n\nMost projects go live in two to three weeks. We come back to you for content, images, and review points. You do not need to be technical. We handle the technical side so you can focus on running your business.",
         },
       ]}
       faqs={[

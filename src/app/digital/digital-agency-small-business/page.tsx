@@ -23,7 +23,7 @@ const comparison = [
   {
     feature: "Fixed-price packages",
     typical: "Usually hourly rates with open-ended scope",
-    rencel: "£1,500, £3,500, or £7,500+ with clear scope",
+    rencel: "£4,500, £7,500, £15,000+ or custom Platform tier with clear scope",
   },
   {
     feature: "Operational understanding",
@@ -85,7 +85,7 @@ const faqs = [
   },
   {
     q: "What if I just want a website, not all the extra stuff?",
-    a: "Our Launch package at £1,500 is just a website with the essentials (domain, email, SSL, SEO, contact form, payment setup). You do not have to take anything else. But the tools and systems are there when you are ready to grow.",
+    a: "Our Launch package at £4,500 is just a website with the essentials (cloud hosting, domain, email, SSL, SEO, contact form, payment setup). You do not have to take anything else. But the tools and systems are there when you are ready to grow.",
   },
 ];
 

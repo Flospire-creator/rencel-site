@@ -31,7 +31,7 @@ export default function Page() {
         },
         {
           heading: "What it costs",
-          body: "A content-and-design refresh on an existing site typically costs £1,500 to £2,500. A complete rebuild with new structure, copy, and design is £3,500 to £5,000. Larger projects with booking, payments, or integrations are quoted separately.\n\nAll prices are fixed. No hourly rates. No surprises.",
+          body: "A content-and-design refresh on an existing site typically costs £2,500 to £4,000. A complete rebuild with new structure, copy, and design starts at £4,500 (our Launch tier) and runs to £7,500 (Grow tier) for a site with booking, CRM and customer journey tracking. Larger projects with custom automation or integrations are quoted as Scale or Platform builds.\n\nAll prices are fixed. No hourly rates. No surprises. Pay upfront or spread over 12 months.",
         },
       ]}
       faqs={[
