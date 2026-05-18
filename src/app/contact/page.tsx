@@ -13,7 +13,7 @@ const serviceOptions = [
 ];
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({ name: "", email: "", company: "", service: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", company: "", service: "", message: "", website: "" });
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
@@ -106,6 +106,11 @@ export default function ContactPage() {
                 <div>
                   <label htmlFor="message" className="block text-xs text-muted uppercase tracking-wider mb-1.5">Message *</label>
                   <textarea id="message" required rows={4} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} className="w-full bg-transparent border-b border-card-border py-2.5 text-foreground focus:outline-none focus:border-accent transition-colors resize-none" placeholder="Tell us about your project..." />
+                </div>
+                {/* Honeypot: hidden from humans, bots will fill it and get silently dropped */}
+                <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: 1, height: 1, overflow: "hidden" }}>
+                  <label htmlFor="website">Leave this field empty</label>
+                  <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" value={formData.website} onChange={(e) => setFormData({ ...formData, website: e.target.value })} />
                 </div>
                 {error && (
                   <p role="alert" aria-live="assertive" className="text-red-400 text-sm">{error}</p>

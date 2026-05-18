@@ -25,8 +25,26 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function POST(request: Request) {
   try {
+    // Require Origin header from an allowlisted domain (CSRF protection)
+    const origin = request.headers.get("origin");
+    const allowedOrigins = [
+      "https://www.rencelprocurements.co.uk",
+      "https://rencelprocurements.co.uk",
+      "http://localhost:3000",
+      "http://localhost:3001",
+      "http://localhost:3003",
+    ];
+    if (!origin || !allowedOrigins.includes(origin)) {
+      return NextResponse.json({ error: "Forbidden." }, { status: 403 });
+    }
+
     const body = await request.json();
-    const { name, email, company, service, message } = body;
+    const { name, email, company, service, message, website } = body;
+
+    // Honeypot: real users never see or fill this. Bots do. Silently drop.
+    if (website && typeof website === "string" && website.length > 0) {
+      return NextResponse.json({ success: true });
+    }
 
     if (!name || !email || !message) {
       return NextResponse.json(
@@ -49,18 +67,6 @@ export async function POST(request: Request) {
     }
     if (typeof message !== "string" || message.length > 5000) {
       return NextResponse.json({ error: "Message is too long." }, { status: 400 });
-    }
-
-    // Check origin header for basic CSRF protection
-    const origin = request.headers.get("origin");
-    const allowedOrigins = [
-      "https://www.rencelprocurements.co.uk",
-      "https://rencelprocurements.co.uk",
-      "http://localhost:3000",
-      "http://localhost:3001",
-    ];
-    if (origin && !allowedOrigins.includes(origin)) {
-      return NextResponse.json({ error: "Forbidden." }, { status: 403 });
     }
 
     await resend.emails.send({
