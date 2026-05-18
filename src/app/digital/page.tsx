@@ -60,7 +60,19 @@ const faqs = [
   },
   {
     q: "How much does a small business website cost?",
-    a: "Our Launch package at £3,500 includes a complete website with cloud hosting, domain, business email, SSL, SEO setup and payment processing, live in 2-3 weeks. The Grow package at £5,000 adds booking and CRM. Scale starts at £10,000 for custom automation and AI tools. Our Platform tier (£15,000-£30,000+) covers custom SaaS products and intelligence platforms. For businesses who want expert guidance before committing to a build, our Digital Audit & Roadmap is £450. All prices exclude VAT.",
+    a: "Our Launch package at £4,500 includes a complete website with cloud hosting, domain, business email, SSL, SEO setup and payment processing, live in 2-3 weeks. The Grow package at £7,500 adds booking, CRM and customer journey tracking. Scale starts at £15,000 for custom automation and AI tools. Our Platform tier (£15,000-£30,000+) covers custom SaaS products and intelligence platforms. For businesses who want expert guidance before committing to a build, our Digital Audit & Roadmap is £450. All prices exclude VAT.",
+  },
+  {
+    q: "Can I pay monthly instead of paying upfront?",
+    a: "Yes. Launch, Grow and Scale can be paid monthly over 12 months: £450/month for Launch, £750/month for Grow, £1,500/month for Scale. Platform projects use custom payment plans agreed at the start. After your build, you can also choose a Care Plan from £150/month for ongoing hosting, support and improvements.",
+  },
+  {
+    q: "Do I own the website?",
+    a: "Yes. You own the website, the domain, the code, the design and your data. We do not lock you into multi-year contracts or rent you the site like some agencies do. If you ever want to take your site elsewhere, you can.",
+  },
+  {
+    q: "How does customer journey tracking help me get more sales?",
+    a: "Most small business websites lose 70 to 90 percent of visitors before they ever enquire. Customer journey tracking shows you where those visitors drop off: which pages they leave, which buttons they ignore, where they get confused. With Care+, we review this data every month and tell you the single change that will lift your conversions most. The result is more enquiries and more sales from the same traffic, without spending more on marketing.",
   },
   {
     q: "How quickly can a small business website go live?",
@@ -71,7 +83,8 @@ const faqs = [
 const packages = [
   {
     name: "Launch",
-    price: "£3,500",
+    price: "£4,500",
+    monthlyPrice: "or £450/month over 12 months",
     timeline: "Live in 2-3 weeks",
     description: "Everything you need to get online and look professional.",
     features: [
@@ -91,7 +104,8 @@ const packages = [
   },
   {
     name: "Grow",
-    price: "£5,000",
+    price: "£7,500",
+    monthlyPrice: "or £750/month over 12 months",
     timeline: "Live in 4-6 weeks",
     description: "Your business runs smoother. Clients book, pay, and come back.",
     features: [
@@ -100,7 +114,7 @@ const packages = [
       "CRM setup and configuration",
       "Payment processing integration",
       "Email marketing setup",
-      "Google Analytics and tracking",
+      "Customer journey tracking: heatmaps, analytics and drop-off analysis",
       "Social media integration",
       "Managed cloud hosting (year 1 included)",
       "3 months of support included",
@@ -110,7 +124,8 @@ const packages = [
   },
   {
     name: "Scale",
-    price: "£10,000+",
+    price: "£15,000+",
+    monthlyPrice: "or £1,500/month over 12 months",
     timeline: "Live in 6-10 weeks",
     description: "Custom systems built around how your business actually works.",
     features: [
@@ -119,7 +134,7 @@ const packages = [
       "AI tools (chatbot, smart follow-ups)",
       "Third-party integrations (accounting, inventory)",
       "Customer portal or dashboard",
-      "Advanced analytics and reporting",
+      "Conversion funnel analytics with session recordings",
       "Staff training and documentation",
       "Managed cloud hosting (year 1 included)",
       "6 months of priority support",
@@ -130,13 +145,14 @@ const packages = [
   {
     name: "Platform",
     price: "£15,000-£30,000+",
+    monthlyPrice: "Custom payment plans available",
     timeline: "Live in 8-14 weeks",
     description: "Custom intelligence platforms and SaaS products. Production-grade from day one.",
     features: [
       "Multi-user platform or SaaS product",
       "Custom architecture and database design",
       "Authentication and user management",
-      "Admin panel and analytics dashboard",
+      "Admin panel with customer journey analytics",
       "AI and data pipelines where needed",
       "Stripe and third-party API integrations",
       "Enterprise-grade security",
@@ -145,6 +161,38 @@ const packages = [
     ],
     highlight: false,
     cta: "Scope a Project",
+  },
+];
+
+const carePlans = [
+  {
+    name: "Care",
+    price: "£150",
+    description: "Keep your site safe, fast and online.",
+    features: [
+      "Managed cloud hosting and SSL",
+      "Security updates and weekly backups",
+      "24/7 uptime monitoring",
+      "1 hour of content updates per month",
+      "Monthly performance report",
+    ],
+    highlight: false,
+    cta: "Start Care Plan",
+  },
+  {
+    name: "Care+",
+    price: "£350",
+    description: "Use data to grow. Every month we tell you the one thing to fix to convert more visitors into paying customers.",
+    features: [
+      "Everything in Care",
+      "3 hours of content and design work per month",
+      "Monthly customer journey review with one growth recommendation",
+      "Quarterly strategy and growth call",
+      "Annual site refresh (visual and content update)",
+      "Priority response (next business day)",
+    ],
+    highlight: true,
+    cta: "Start Care+",
   },
 ];
 
@@ -378,6 +426,7 @@ export default function DigitalPage() {
                 <div className="mb-6">
                   <h3 className="text-lg font-semibold font-[family-name:var(--font-space-grotesk)] mb-1">{pkg.name}</h3>
                   <div className="text-3xl font-bold font-[family-name:var(--font-space-grotesk)] gradient-text mb-1">{pkg.price}</div>
+                  <div className="text-xs text-muted/90 mb-2">{pkg.monthlyPrice}</div>
                   <div className="text-xs uppercase tracking-wider text-accent font-medium mb-3">{pkg.timeline}</div>
                   <p className="text-sm text-muted">{pkg.description}</p>
                 </div>
@@ -408,7 +457,76 @@ export default function DigitalPage() {
           </div>
 
           <p className="text-center text-xs text-muted mt-6 max-w-2xl mx-auto">
-            All prices exclude VAT. Cloud hosting included for year 1. From year 2, hosting and tools typically run £20-80/month depending on package. Custom requirements? We will scope it properly and give you a fixed quote.
+            All prices exclude VAT. Cloud hosting included for year 1. From year 2, choose a Care Plan below or self-host from £20-80/month. Custom requirements? We will scope it properly and give you a fixed quote. You always own your website.
+          </p>
+        </div>
+      </section>
+
+      {/* Care Plans */}
+      <section id="care" className="py-16 md:py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <span className="text-xs tracking-[0.25em] uppercase text-accent font-medium">Aftercare</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight mt-4 mb-4">
+              Keep Your Site Working After Launch.
+            </h2>
+            <p className="text-muted max-w-2xl mx-auto">
+              When your included support window ends, choose a Care Plan to keep your site running, improving and converting. Month to month. Cancel anytime. You always own your website.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-3xl mx-auto">
+            {carePlans.map((plan) => (
+              <div
+                key={plan.name}
+                className={`rounded-2xl p-6 md:p-7 flex flex-col relative ${
+                  plan.highlight
+                    ? "bg-card-bg border-2 border-accent/30 shadow-[0_0_40px_rgba(0,212,255,0.08)]"
+                    : "bg-card-bg/50 border border-card-border"
+                }`}
+              >
+                {plan.highlight && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-accent text-background text-xs font-semibold rounded-full whitespace-nowrap">
+                    Most Popular
+                  </div>
+                )}
+
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold font-[family-name:var(--font-space-grotesk)] mb-1">{plan.name}</h3>
+                  <div className="text-3xl font-bold font-[family-name:var(--font-space-grotesk)] gradient-text mb-1">
+                    {plan.price}
+                    <span className="text-base text-muted font-normal">/month</span>
+                  </div>
+                  <p className="text-sm text-muted mt-3">{plan.description}</p>
+                </div>
+
+                <ul className="space-y-2.5 mb-8 flex-1">
+                  {plan.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-2.5 text-sm">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-accent shrink-0 mt-0.5">
+                        <path d="M13.3 4.3 6 11.6 2.7 8.3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span className="text-muted">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  href="/contact"
+                  className={`w-full py-3 rounded-full text-sm font-semibold text-center transition-all duration-300 ${
+                    plan.highlight
+                      ? "bg-accent text-background hover:shadow-[0_0_30px_rgba(0,212,255,0.3)]"
+                      : "border border-card-border hover:border-accent/30 hover:bg-accent/5"
+                  }`}
+                >
+                  {plan.cta}
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-center text-xs text-muted mt-6 max-w-2xl mx-auto">
+            All prices exclude VAT. Care Plans replace standard hosting after year 1. Pause or cancel anytime. No long-term contracts.
           </p>
         </div>
       </section>
