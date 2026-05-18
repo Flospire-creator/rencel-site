@@ -85,9 +85,10 @@ export default function RootLayout({
         <WebSiteSchema />
       </head>
       <body>
-        <div className="noise-overlay" />
+        <a href="#main-content" className="skip-link">Skip to main content</a>
+        <div className="noise-overlay" aria-hidden="true" />
         <Navbar />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
       <GoogleAnalytics gaId="G-LCQMREM63Q" />

@@ -200,7 +200,7 @@ export default function Home() {
                 <div className="capability-card rounded-2xl p-6 md:p-8 h-full">
                   <div className="flex items-start gap-4 mb-5">
                     <div className="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center shrink-0">
-                      <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" className="text-accent">
+                      <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" className="text-accent" aria-hidden="true">
                         <path d={cap.icon} strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </div>

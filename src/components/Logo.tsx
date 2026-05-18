@@ -5,13 +5,14 @@ export function Logo({ size = "default" }: { size?: "default" | "large" }) {
   const textSize = size === "large" ? "text-xl" : "text-base";
 
   return (
-    <Link href="/" className="flex items-center gap-2.5">
+    <Link href="/" className="flex items-center gap-2.5" aria-label="Rencel home">
       <svg
         width={iconSize}
         height={iconSize}
         viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
       >
         {/* Rounded square background */}
         <rect width="32" height="32" rx="8" fill="#00D4FF" />

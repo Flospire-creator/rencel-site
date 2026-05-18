@@ -131,7 +131,7 @@ export function CaseStudy({
           <ul className="space-y-3">
             {built.map((item) => (
               <li key={item} className="flex items-start gap-3 bg-card-bg/50 border border-card-border rounded-xl p-4">
-                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" className="text-accent shrink-0 mt-0.5">
+                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" className="text-accent shrink-0 mt-0.5" aria-hidden="true">
                   <path d="M13.3 4.3 6 11.6 2.7 8.3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 <span className="text-sm text-foreground/90 leading-relaxed">{item}</span>

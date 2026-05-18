@@ -77,8 +77,8 @@ export default function ContactPage() {
 
           <div>
             {submitted ? (
-              <div className="flex flex-col items-center justify-center h-full text-center p-10 rounded-xl border border-card-border bg-card-bg">
-                <div className="text-accent text-4xl mb-4">&#10003;</div>
+              <div role="status" aria-live="polite" className="flex flex-col items-center justify-center h-full text-center p-10 rounded-xl border border-card-border bg-card-bg">
+                <div className="text-accent text-4xl mb-4" aria-hidden="true">&#10003;</div>
                 <h3 className="text-xl font-bold font-[family-name:var(--font-space-grotesk)] mb-2">Message Sent</h3>
                 <p className="text-muted text-sm">Thank you. We will get back to you within 24 hours.</p>
               </div>
@@ -108,7 +108,7 @@ export default function ContactPage() {
                   <textarea id="message" required rows={4} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} className="w-full bg-transparent border-b border-card-border py-2.5 text-foreground focus:outline-none focus:border-accent transition-colors resize-none" placeholder="Tell us about your project..." />
                 </div>
                 {error && (
-                  <p className="text-red-400 text-sm">{error}</p>
+                  <p role="alert" aria-live="assertive" className="text-red-400 text-sm">{error}</p>
                 )}
                 <button type="submit" disabled={sending} className="mt-2 w-full py-3 bg-accent text-background font-semibold rounded-full text-sm hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed">
                   {sending ? "Sending..." : "Send Message"}
