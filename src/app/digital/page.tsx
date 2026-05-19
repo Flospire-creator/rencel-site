@@ -255,15 +255,9 @@ const recentWork = [
 ];
 
 const locations = [
-  "Chippenham",
-  "Bristol",
-  "Bath",
-  "Swindon",
-  "Wiltshire",
-  "London",
   "United Kingdom",
-  "Miami, USA",
-  "Nigeria",
+  "United States",
+  "United Arab Emirates",
 ];
 
 export default function DigitalPage() {
@@ -304,6 +298,23 @@ export default function DigitalPage() {
             <Link href="/digital/free-website-review" className="px-7 py-3.5 border border-card-border rounded-full text-sm hover:border-accent/30 hover:bg-accent/5 transition-all duration-300 text-center">
               Request a Free Website Review
             </Link>
+          </div>
+
+          {/* Big-brand credibility for SMB buyers */}
+          <div className="mt-14 pt-8 border-t border-card-border/50">
+            <p className="text-xs tracking-[0.25em] uppercase text-muted font-medium mb-4">
+              The same team has delivered technology for
+            </p>
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
+              {["Dyson", "Philips", "CBRE", "Oxford University"].map((client) => (
+                <span
+                  key={client}
+                  className="text-base md:text-lg font-bold font-[family-name:var(--font-space-grotesk)] tracking-[0.05em] text-foreground/75"
+                >
+                  {client}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -614,10 +625,10 @@ export default function DigitalPage() {
         <div className="max-w-5xl mx-auto px-6 text-center">
           <span className="text-xs tracking-[0.25em] uppercase text-accent font-medium">Where We Work</span>
           <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight mt-4 mb-4">
-            Supporting Small Businesses Across the UK, USA and Africa
+            Supporting Small Businesses Across Three Continents
           </h2>
           <p className="text-muted max-w-2xl mx-auto leading-relaxed mb-10">
-            We are based in Bristol with strong local roots in Chippenham, Wiltshire, Bath, Swindon and London. Our wider team and supplier network extends to Miami, USA and Nigeria. Most of our work is delivered remotely, so we can support any small business across the UK without a travel premium.
+            Headquartered in the United Kingdom with extended teams in the United States and the United Arab Emirates. Most of our work is delivered remotely, so we can support any small business across the UK without a travel premium.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             {locations.map((loc) => (

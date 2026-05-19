@@ -78,6 +78,22 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="py-20 md:py-24 border-y border-card-border/50">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <span className="text-xs tracking-[0.25em] uppercase text-muted font-medium">Technology Delivered For</span>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-5 md:gap-x-16">
+            {["Dyson", "Philips", "CBRE", "Oxford University"].map((client) => (
+              <span
+                key={client}
+                className="text-xl md:text-2xl font-bold font-[family-name:var(--font-space-grotesk)] tracking-[0.05em] text-foreground/80"
+              >
+                {client}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-card-bg/40">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

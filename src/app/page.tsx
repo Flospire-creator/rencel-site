@@ -106,6 +106,23 @@ export default function Home() {
         </div>
       </div>
 
+      {/* ==================== CLIENT CREDIBILITY ==================== */}
+      <section className="py-14 md:py-18 border-y border-card-border/50">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <span className="text-xs tracking-[0.25em] uppercase text-muted font-medium">Technology Delivered For</span>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-5 md:gap-x-16">
+            {["Dyson", "Philips", "CBRE", "Oxford University"].map((client) => (
+              <span
+                key={client}
+                className="text-xl md:text-2xl font-bold font-[family-name:var(--font-space-grotesk)] tracking-[0.05em] text-foreground/80 hover:text-foreground transition-colors"
+              >
+                {client}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ==================== SYSTEM STORY (Centrepiece) ==================== */}
       <section className="py-24 md:py-36 relative overflow-hidden mesh-gradient">
         <div className="max-w-5xl mx-auto px-6">
