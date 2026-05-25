@@ -37,6 +37,25 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  // 308 permanent redirects from old WordPress URLs to the new Next.js routes.
+  // These clear out the "Not found (404)" entries Google Search Console is
+  // reporting from the pre-rebuild site and preserve any link equity.
+  async redirects() {
+    return [
+      { source: "/services", destination: "/technology", permanent: true },
+      { source: "/services/:path*", destination: "/technology", permanent: true },
+      { source: "/our-services", destination: "/technology", permanent: true },
+      { source: "/our-services/:path*", destination: "/technology", permanent: true },
+      { source: "/about-us", destination: "/about", permanent: true },
+      { source: "/about-us/:path*", destination: "/about", permanent: true },
+      { source: "/contact-us", destination: "/contact", permanent: true },
+      { source: "/contact-us/:path*", destination: "/contact", permanent: true },
+      { source: "/blog", destination: "/insights", permanent: true },
+      // Old blog posts redirect to the Insights index, since slugs may not
+      // match. Safer than a slug-preserving redirect that risks a chained 404.
+      { source: "/blog/:path*", destination: "/insights", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;
