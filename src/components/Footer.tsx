@@ -15,7 +15,7 @@ export function Footer() {
             </p>
             <div className="text-sm text-muted space-y-1">
               <div><a href="tel:+441934515563" className="hover:text-accent transition-colors">+44 (0)1934 515563</a></div>
-              <div><a href="mailto:info@rencelprocurements.co.uk" className="hover:text-accent transition-colors">info@rencelprocurements.co.uk</a></div>
+              <div><a href="mailto:hello@rencelprocurements.co.uk" className="hover:text-accent transition-colors">hello@rencelprocurements.co.uk</a></div>
             </div>
           </div>
 

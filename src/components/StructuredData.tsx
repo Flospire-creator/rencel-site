@@ -24,7 +24,7 @@ export function OrganizationSchema() {
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+44-1934-515563",
-      email: "info@rencelprocurements.co.uk",
+      email: "hello@rencelprocurements.co.uk",
       contactType: "sales",
     },
     sameAs: [],
@@ -112,7 +112,7 @@ export function LocalBusinessSchema() {
     description:
       "Rencel Digital helps small businesses across the UK build practical websites, set up digital tools, improve operations and access procurement support.",
     telephone: "+44-1934-515563",
-    email: "info@rencelprocurements.co.uk",
+    email: "hello@rencelprocurements.co.uk",
     priceRange: "£450 - £30,000+",
     address: {
       "@type": "PostalAddress",

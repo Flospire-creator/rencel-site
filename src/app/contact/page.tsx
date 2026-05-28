@@ -66,7 +66,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <div className="text-xs text-muted uppercase tracking-wider mb-1">Email</div>
-                <a href="mailto:info@rencelprocurements.co.uk" className="text-lg hover:text-accent transition-colors">info@rencelprocurements.co.uk</a>
+                <a href="mailto:hello@rencelprocurements.co.uk" className="text-lg hover:text-accent transition-colors">hello@rencelprocurements.co.uk</a>
               </div>
               <div>
                 <div className="text-xs text-muted uppercase tracking-wider mb-1">Registered Office</div>
