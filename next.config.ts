@@ -1,11 +1,19 @@
 import type { NextConfig } from "next";
 
 // Content Security Policy: restricts where scripts/styles/images can load from.
-// 'unsafe-inline' and 'unsafe-eval' on scripts are required by Next.js until
-// we migrate to a nonce-based setup via middleware (backlog).
+//
+// Trade-off note: 'unsafe-inline' on script-src stays because removing it
+// would require nonce-based CSP via middleware, which forces every page into
+// dynamic rendering (no static optimisation, no CDN caching, higher Vercel
+// cost). For a static marketing site with no user-generated content or
+// authenticated sessions, that perf hit outweighs the security gain. Per
+// Next.js docs, React and Next do NOT use eval() in production, so
+// 'unsafe-eval' is dev-only. We drop it from the production policy below.
+const isDev = process.env.NODE_ENV === "development";
+
 const cspDirectives = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://*.vercel-scripts.com",
+  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://www.googletagmanager.com https://www.google-analytics.com https://*.vercel-scripts.com`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com",
   "font-src 'self' data:",
