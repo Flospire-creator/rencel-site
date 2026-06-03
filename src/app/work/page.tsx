@@ -18,6 +18,14 @@ interface Project {
 
 const projects: Project[] = [
   {
+    slug: "portishead-tyre-and-mot",
+    category: "Small Business Automation",
+    title: "Portishead Tyre & MOT",
+    description: "Lee was losing 8 bookings a week to phone-tag and could not take payments online. We built a live booking system tied to real tyre stock. £6,000 in sales in the first 14 days. Fully booked through August.",
+    tags: ["Web", "Booking", "Payments", "Automotive"],
+    status: "Live Case Study",
+  },
+  {
     slug: "our-own-rebuild",
     category: "Digital Transformation",
     title: "Rebuilding Our Own Brand",
