@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { BlogPost, H2, Lead } from "@/components/BlogPost";
+import { BlogPost, H2, Lead, ProofCallout } from "@/components/BlogPost";
 
 export const metadata: Metadata = {
   title: "Why Your Small Business Website Is Not Converting",
@@ -122,6 +122,12 @@ export default function Page() {
       <p>
         Most of these fixes take a few hours each, not a full rebuild. You do not need a new website. You need the existing one to do its job properly.
       </p>
+
+      <ProofCallout
+        title="When a rebuild is the right answer"
+        body="Sometimes the existing site is too broken to fix. Lee at Portishead Tyre & MOT was losing 8 bookings a week because his WordPress site could not take payments. We rebuilt with a live booking system tied to real tyre stock. £6,000 in sales in the first 14 days. Fully booked through August."
+        href="/work/portishead-tyre-and-mot"
+      />
 
       <p>
         If you want a second opinion on what to fix first, <Link href="/digital/website-redesign" className="text-accent hover:underline">a website review</Link> takes us about an hour and comes back with a specific list of changes in priority order.

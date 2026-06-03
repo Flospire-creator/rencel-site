@@ -128,6 +128,9 @@ const packages = [
     monthlyPrice: "or £1,500/month over 12 months",
     timeline: "Live in 6-10 weeks",
     description: "Custom systems built around how your business actually works.",
+    proofText: "Real example: Portishead Tyre & MOT - £6,000 in 14 days.",
+    proofLink: "/work/portishead-tyre-and-mot",
+    proofLinkLabel: "See case study",
     features: [
       "Everything in Grow",
       "Custom workflow automation",
@@ -239,7 +242,12 @@ const whoWeWorkWith = [
   "Procurement-led businesses",
 ];
 
-const recentWork = [
+const recentWork: { name: string; description: string; slug?: string }[] = [
+  {
+    name: "Portishead Tyre & MOT",
+    description: "Independent garage. Live booking system tied to real tyre stock, four third-party integrations, Stripe payments. £6,000 in sales in the first 14 days. Fully booked through August.",
+    slug: "portishead-tyre-and-mot",
+  },
   {
     name: "Automotive Trade Platform",
     description: "Website and go-to-market positioning for a connected vehicle intelligence startup serving the UK automotive aftermarket.",
@@ -247,10 +255,6 @@ const recentWork = [
   {
     name: "Events Technology Platform",
     description: "Digital product for the wedding and events industry, covering guest experience and on-the-day coordination.",
-  },
-  {
-    name: "Rencel Digital Operations",
-    description: "Website, sourcing workflows, and supplier management systems for our own procurement business across five continents.",
   },
 ];
 
@@ -315,6 +319,12 @@ export default function DigitalPage() {
                 </span>
               ))}
             </div>
+            <p className="mt-5 text-sm text-muted leading-relaxed">
+              Most recent small business build: Portishead Tyre & MOT delivered <span className="text-foreground font-semibold">£6,000 in sales in the first 14 days</span>, fully booked through August.{" "}
+              <Link href="/work/portishead-tyre-and-mot" className="text-accent hover:underline whitespace-nowrap">
+                See case study &rarr;
+              </Link>
+            </p>
           </div>
         </div>
       </section>
@@ -440,6 +450,14 @@ export default function DigitalPage() {
                   <div className="text-xs text-muted/90 mb-2">{pkg.monthlyPrice}</div>
                   <div className="text-xs uppercase tracking-wider text-accent font-medium mb-3">{pkg.timeline}</div>
                   <p className="text-sm text-muted">{pkg.description}</p>
+                  {pkg.proofText && pkg.proofLink && (
+                    <p className="text-xs text-accent/90 mt-3 leading-relaxed">
+                      {pkg.proofText}{" "}
+                      <Link href={pkg.proofLink} className="underline hover:text-accent transition-colors whitespace-nowrap">
+                        {pkg.proofLinkLabel ?? "See case study"} &rarr;
+                      </Link>
+                    </p>
+                  )}
                 </div>
 
                 <ul className="space-y-2.5 mb-8 flex-1">
@@ -553,12 +571,26 @@ export default function DigitalPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {recentWork.map((work) => (
-              <div key={work.name} className="capability-card rounded-2xl p-6">
-                <h3 className="text-base font-semibold font-[family-name:var(--font-space-grotesk)] mb-2">{work.name}</h3>
-                <p className="text-sm text-muted leading-relaxed">{work.description}</p>
-              </div>
-            ))}
+            {recentWork.map((work) => {
+              const inner = (
+                <>
+                  <h3 className="text-base font-semibold font-[family-name:var(--font-space-grotesk)] mb-2">{work.name}</h3>
+                  <p className="text-sm text-muted leading-relaxed">{work.description}</p>
+                  {work.slug && (
+                    <p className="text-xs text-accent mt-4 group-hover:underline">See case study &rarr;</p>
+                  )}
+                </>
+              );
+              return work.slug ? (
+                <Link key={work.name} href={`/work/${work.slug}`} className="capability-card rounded-2xl p-6 block group">
+                  {inner}
+                </Link>
+              ) : (
+                <div key={work.name} className="capability-card rounded-2xl p-6">
+                  {inner}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

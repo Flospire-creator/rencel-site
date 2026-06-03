@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { BlogPost, H2, Lead } from "@/components/BlogPost";
+import { BlogPost, H2, Lead, ProofCallout } from "@/components/BlogPost";
 
 export const metadata: Metadata = {
   title: "Best Booking Tools for Small UK Businesses",
@@ -150,6 +150,12 @@ export default function Page() {
       <p>
         Anything else: start with Calendly. Upgrade when you hit its limits.
       </p>
+
+      <ProofCallout
+        title="When a generic booking tool is not enough"
+        body="If your business depends on live stock or live pricing, off-the-shelf booking tools cannot do it. Lee at Portishead Tyre & MOT needed customers to enter their reg, see their exact tyre size and live prices from his suppliers, pick a fitting slot, pay a deposit and get confirmation. We built it custom with four third-party integrations. £6,000 in sales in the first 14 days."
+        href="/work/portishead-tyre-and-mot"
+      />
     </BlogPost>
   );
 }

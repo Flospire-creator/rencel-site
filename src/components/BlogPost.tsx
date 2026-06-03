@@ -107,3 +107,30 @@ export function H2({ children }: { children: ReactNode }) {
 export function Lead({ children }: { children: ReactNode }) {
   return <p className="text-lg text-foreground/90 leading-relaxed">{children}</p>;
 }
+
+export function ProofCallout({
+  title,
+  body,
+  href,
+  linkLabel = "See case study",
+}: {
+  title: string;
+  body: string;
+  href: string;
+  linkLabel?: string;
+}) {
+  return (
+    <aside className="my-8 rounded-2xl border border-accent/25 bg-accent/5 p-5 md:p-6">
+      <div className="text-xs tracking-[0.2em] uppercase text-accent font-semibold mb-2">
+        Real example
+      </div>
+      <h3 className="text-base md:text-lg font-semibold font-[family-name:var(--font-space-grotesk)] text-foreground mb-2">
+        {title}
+      </h3>
+      <p className="text-sm text-foreground/85 leading-relaxed mb-3">{body}</p>
+      <Link href={href} className="text-sm text-accent font-medium hover:underline">
+        {linkLabel} &rarr;
+      </Link>
+    </aside>
+  );
+}

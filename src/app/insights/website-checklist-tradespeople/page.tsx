@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { BlogPost, H2, Lead } from "@/components/BlogPost";
+import { BlogPost, H2, Lead, ProofCallout } from "@/components/BlogPost";
 
 export const metadata: Metadata = {
   title: "Website Checklist for Tradespeople and Local Service Businesses",
@@ -156,6 +156,12 @@ export default function Page() {
       <p>
         If you get half of these right, your website will outperform almost every competitor in your area. If you get all of them right, you will start getting jobs from people who found you on Google instead of word of mouth.
       </p>
+
+      <ProofCallout
+        title="Portishead Tyre & MOT: from phone-tag to fully booked"
+        body="Lee runs an independent garage in Portishead. His old WordPress site could not take payments and he was losing around 8 bookings a week to phone-tag. We rebuilt the site with a live booking system, four third-party integrations and Stripe payments. £6,000 in sales in the first 14 days. Fully booked through August."
+        href="/work/portishead-tyre-and-mot"
+      />
 
       <p>
         We build trade websites with all of this built in as standard. <Link href="/digital/chippenham-small-business-websites" className="text-accent hover:underline">Fixed price, two to three weeks from brief to live</Link>.

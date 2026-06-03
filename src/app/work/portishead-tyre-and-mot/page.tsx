@@ -47,10 +47,14 @@ export default function Page() {
         "Online booking flow: pick tyre, pick date, pay deposit, get confirmation",
         "Stripe payments checkout",
         "Automated booking and reminder emails",
-        "Customer journey tracking with conversion analytics",
+        "Customer journey tracking with conversion analytics and funnel reporting",
         "Local SEO: keyword targeting, schema, indexing",
         "Google Business Profile reconfigured for local search",
-        "Mobile-optimised throughout (60+ Lighthouse mobile score)",
+        "Mobile-first design (60+ Lighthouse mobile score)",
+        "Managed cloud hosting and security (year 1 included)",
+        "Business email configuration on Lee's domain",
+        "Staff training and walkthrough documentation",
+        "6 months of priority support included",
       ]}
       outcomes={[
         { metric: "£6,000", label: "Sales in first 14 days" },
@@ -61,7 +65,7 @@ export default function Page() {
       liveUrl="https://www.tyreandmot.co.uk/"
       liveLabel="See it live"
       ctaHeading="Your business losing bookings to the phone?"
-      ctaBody="We build live booking systems with payments and proper integrations, not just websites. Same approach, your business."
+      ctaBody="Delivered as our Scale package: full custom build with integrations, payments, customer journey tracking and 6 months of priority support. From £15,000. Same approach, your business."
     />
   );
 }
