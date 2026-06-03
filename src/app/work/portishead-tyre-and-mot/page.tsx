@@ -32,7 +32,7 @@ export default function Page() {
       approach={
         <>
           <p>
-            We rebuilt the site with real third-party integrations, not a template. The goal: a customer enters their registration plate, sees their exact tyre size and live prices, picks a fitting slot, pays a deposit, and gets a confirmation email. All without ringing, all within 60 seconds.
+            We rebuilt the brand and the site end to end. New identity, four live third-party integrations, search optimised for local intent. Not a template. The goal: a customer enters their registration plate, sees their exact tyre size and live prices, picks a fitting slot, pays a deposit, and gets a confirmation email. All without ringing, all within 60 seconds.
           </p>
           <p>
             The site is mobile-first because 70 per cent of Lee&apos;s enquiries come from drivers at petrol stations checking prices on their phone. Every interaction is designed to take under a minute.
@@ -40,15 +40,17 @@ export default function Page() {
         </>
       }
       built={[
-        "Custom website with live third-party API integrations",
+        "New logo, brand identity and visual system",
+        "Custom website with four live third-party integrations",
         "Registration-plate-to-tyre-size lookup",
-        "Live tyre price and stock display from Lee's Tyresoft account",
+        "Live tyre price and stock display from Lee's Tyresoft and Stapletons accounts",
         "Online booking flow: pick tyre, pick date, pay deposit, get confirmation",
         "Stripe payments checkout",
-        "Automated booking confirmation and reminder emails",
+        "Automated booking and reminder emails",
         "Customer journey tracking with conversion analytics",
-        "Mobile-optimised throughout (60+ Lighthouse mobile score)",
+        "Local SEO: keyword targeting, schema, indexing",
         "Google Business Profile reconfigured for local search",
+        "Mobile-optimised throughout (60+ Lighthouse mobile score)",
       ]}
       outcomes={[
         { metric: "£6,000", label: "Sales in first 14 days" },
